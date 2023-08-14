@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
+<?php
+session_start();
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,7 +96,7 @@
                           <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                       </div>
                       <div class="btn-exit">
-                        <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                        <a class="admin" href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
                       </div>
                     </div>
                     <div class="content-half">
@@ -331,6 +336,12 @@
         marker.bindPopup("<b>Top-1</b><br>Pau Serrado").openPopup();
         ;
     </script>
+
+    <?php
+    include "../modal/Admin.class.php";
+
+    $adm = new Admin();
+    ?>
 </body>
 
 </html>
