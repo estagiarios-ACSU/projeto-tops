@@ -43,7 +43,7 @@ session_start();
             </label>
 
             <ul class="menu__box">
-                <li class="icons"><img src="./assets/icons/house.svg" class="icon__menu" alt=""><a href=""
+                <li class="icons"><img src="./assets/icons/house.svg" class="icon__menu" alt=""><a href="index.html"
                         class="menu__item">Home</a></li>
                 <li class="icons"><img src="./assets/icons/info-circle.svg" class="icon__menu" alt=""><a href=""
                         class="menu__item">Sobre</a></li>
