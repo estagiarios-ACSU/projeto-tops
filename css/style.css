@@ -18,6 +18,10 @@ body{
 
 }
 
+a{
+    text-decoration: none;
+}
+
 .nav-bar {
     background: #fff;
     width: 100%;
@@ -27,6 +31,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 3rem;
+    text-decoration: none;
 }
 
 /*.line {
@@ -51,6 +56,7 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    text-decoration: none;
 }
 
 li {
@@ -60,6 +66,7 @@ li {
     font-weight: 600;
     transition: .4s;
     cursor: pointer;
+    text-decoration: none;
 }
 
 li:hover {
@@ -71,6 +78,7 @@ li:hover {
 .hamburger-menu{
     display: none;
     margin-top: -1rem;
+    text-decoration: none;
 }
 
 #menu__toogle{
