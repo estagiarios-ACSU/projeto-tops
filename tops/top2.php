@@ -38,11 +38,11 @@
             </label>
 
             <ul class="menu__box">
-                <li class="icons"><img src="./assets/icons/house.svg" class="icon__menu" alt=""><a href="../index.html"
+                <li class="icons"><img src="./assets/icons/house.svg" class="icon__menu" alt=""><a href="../index.php"
                         class="menu__item">Home</a></li>
-                <li class="icons"><img src="./assets/icons/info-circle.svg" class="icon__menu" alt=""><a href="../menu/sobre.html"
+                <li class="icons"><img src="./assets/icons/info-circle.svg" class="icon__menu" alt=""><a href="../menu/sobre.php"
                         class="menu__item">Sobre</a></li>
-                <li class="icons"><img src="./assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="../menu/agenda.html"
+                <li class="icons"><img src="./assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="../menu/agenda.php"
                         class="menu__item">Agenda</a></li>
                 <li class="icons"><img src="./assets/icons/telephone.svg" class="icon__menu" alt=""><a href="#contato"
                         class="menu__item">Contato</a></li>
@@ -51,9 +51,9 @@
 
         <nav class="menu">
             <ul>
-                <a href="../index.html"><li>Home</li></a>
-                <a href="../menu/sobre.html"><li>Sobre</li></a>
-                <a href="../menu/agenda.html"><li>Agenda</li></a>
+                <a href="../index.php"><li>Home</li></a>
+                <a href="../menu/sobre.php"><li>Sobre</li></a>
+                <a href="../menu/agenda.php"><li>Agenda</li></a>
                 <a href="#contato"><li>Contato</li></a>
             </ul>
         </nav>
@@ -91,7 +91,7 @@
                           <p>Área Seca</p>
                       </div>
                       <div class="btn-exit">
-                        <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                        <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                       </div>
                     </div>
                     <div class="content-half">
@@ -121,7 +121,7 @@
                             <p>Área Seca</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -133,7 +133,7 @@
                             <p>Área Seca</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                     </div>
 
@@ -228,7 +228,7 @@
                             <p>Área Seca</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -241,7 +241,7 @@
                             <p>Área Seca</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -255,7 +255,7 @@
                             <p>Área Seca</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -269,7 +269,7 @@
                             <p>Área Seca</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>

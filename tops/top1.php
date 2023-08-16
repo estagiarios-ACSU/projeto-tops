@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<?php
-session_start();
-?>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,11 +38,11 @@ session_start();
             </label>
 
             <ul class="menu__box">
-                <li class="icons"><img src="./assets/icons/house.svg" class="icon__menu" alt=""><a href="../index.html"
+                <li class="icons"><img src="./assets/icons/house.svg" class="icon__menu" alt=""><a href="../index.php"
                         class="menu__item">Home</a></li>
-                <li class="icons"><img src="./assets/icons/info-circle.svg" class="icon__menu" alt=""><a href="../menu/sobre.html"
+                <li class="icons"><img src="./assets/icons/info-circle.svg" class="icon__menu" alt=""><a href="../menu/sobre.php"
                         class="menu__item">Sobre</a></li>
-                <li class="icons"><img src="./assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="../menu/sobre.html"
+                <li class="icons"><img src="./assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="../menu/sobre.php"
                         class="menu__item">Agenda</a></li>
                 <li class="icons"><img src="./assets/icons/telephone.svg" class="icon__menu" alt=""><a href="#contato"
                         class="menu__item">Contato</a></li>
@@ -55,9 +51,9 @@ session_start();
 
         <nav class="menu">
             <ul>
-                <a href="../index.html"><li>Home</li></a>
-                <a href="../menu/sobre.html"><li>Sobre</li></a>
-                <a href="../menu/agenda.html"><li>Agenda</li></a>
+                <a href="../index.php"><li>Home</li></a>
+                <a href="../menu/sobre.php"><li>Sobre</li></a>
+                <a href="../menu/agenda.php"><li>Agenda</li></a>
                 <a href="#contato"><li>Contato</li></a>
             </ul>
         </nav>
@@ -95,7 +91,7 @@ session_start();
                           <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                       </div>
                       <div class="btn-exit">
-                        <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                        <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                       </div>
                     </div>
                     <div class="content-half">
@@ -125,7 +121,7 @@ session_start();
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -137,7 +133,7 @@ session_start();
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                     </div>
 
@@ -232,7 +228,7 @@ session_start();
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -245,7 +241,7 @@ session_start();
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -259,7 +255,7 @@ session_start();
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -273,7 +269,7 @@ session_start();
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.html"><button class="bn632-hover bn18">Voltar</button></a>
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
@@ -335,12 +331,6 @@ session_start();
         marker.bindPopup("<b>Top-1</b><br>Pau Serrado").openPopup();
         ;
     </script>
-
-    <?php
-    include "../modal/Admin.class.php";
-
-    $adm = new Admin();
-    ?>
 </body>
 
 </html>
