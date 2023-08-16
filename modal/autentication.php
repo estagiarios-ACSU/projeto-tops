@@ -7,18 +7,17 @@ if(isset($_POST['btn'])){
     $email = $_POST['email'];
     $senha = $_POST['password'];
 
-    $user = new User($email,$senha);
+    $user = new User($email,$senha,'top');
 
-    $user->connectDatabase('top','root','');
+    $user->connectDb('top');
 
     if($user->getLoginAutentication('usuario')){
         $_SESSION['admin'] = "pinho";
-        header("location:../index.html");
+        header("location:../index.php");
     }else{
         session_destroy();
+        echo"valval";
         echo "vc n esta logado";
     }
 }
-
-
 ?>
