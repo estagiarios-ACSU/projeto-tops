@@ -1,23 +1,21 @@
 <?php
 
-class User{
+include_once "Conn.php";
+
+class User extends Conn{
 
     //Nesse bloco,além de iniciar o construtor dessa classe também inicia o da classe pai.
-    public function __construct($email,$password){
-
+    public function __construct($email,$password,$dbname){
+        parent::__construct($dbname);
         $this->email = $email;
         $this->password = $password;
-    }
-
-    public function connectDatabase($dbname,$user,$password){
-        $this->database = new PDO("mysql:host=localhost;dbname=$dbname", $user, $password);
     }
 
     public function getLoginAutentication($table){
 
         //Seleciona todos os dados da tabela.
         $cmd = "SELECT * FROM $table";
-        $query = $this->database->query($cmd);
+        $query = $this->connection->query($cmd);
         
         $signed = False;
 
