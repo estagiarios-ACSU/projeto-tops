@@ -26,10 +26,11 @@ $filteredData = array_filter($data, function ($row) use ($searchTerm) {
 foreach ($filteredData as $row) {
     echo "<tr>";
     echo "<td>{$row[0]}</td>";
-    echo "<td contenteditable>{$row[1]}</td>";
-    echo "<td contenteditable>{$row[2]}</td>";
-    echo "<td contenteditable>{$row[3]}</td>";
-    echo "<td contenteditable>{$row[4]}</td>";
+    echo "<td>{$row[1]}</td>";
+    echo "<td>{$row[2]}</td>";
+    echo "<td>{$row[3]}</td>";
+    echo "<td>{$row[4]}</td>";
+    echo "<td><a><img src='../assets/botao-editar.png' alt='Editar' width='20' heigth='20'></a><a><img src='../assets/lixeira.png' alt='Deletar' width='20' heigth='20'></a></td>";
     echo "</tr>";
 }
 ?>
