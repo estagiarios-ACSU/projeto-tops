@@ -1,6 +1,6 @@
 <?php
 
-$db = new PDO("mysql:host=localhost;dbname=table","root","");
+$db = new PDO("mysql:host=localhost;dbname=top","root","");
 
 // Simulação de dados - substitua isso com acesso a um banco de dados real
 
@@ -30,7 +30,7 @@ foreach ($filteredData as $row) {
     echo "<td>{$row[2]}</td>";
     echo "<td>{$row[3]}</td>";
     echo "<td>{$row[4]}</td>";
-    echo "<td><a><img src='../assets/botao-editar.png' alt='Editar' width='20' heigth='20'></a><a><img src='../assets/lixeira.png' alt='Deletar' width='20' heigth='20'></a></td>";
+    echo "<td style='text-align:center'><a><img src='../assets/icons/edit.ico' alt='Editar' width='20' heigth='20'></a><a><img src='../assets/icons/delete.ico' alt='Deletar' width='20' heigth='20'></a></td>";
     echo "</tr>";
 }
 ?>
