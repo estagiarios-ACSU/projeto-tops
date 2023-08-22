@@ -21,3 +21,25 @@ searchInput.addEventListener('input', () => {
             tableBody.innerHTML = data;
         });
 });
+
+const closeModalBtn = document.getElementById('closeModalBtn');
+const saveBtn = document.getElementById('saveBtn');
+const modal = document.getElementById('modal');
+
+addButton.addEventListener('click', () => {
+  modal.style.display = 'flex';
+});
+
+saveBtn.addEventListener('click', () => {
+  console.log("dados salvos com sucesso");
+});
+
+closeModalBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});

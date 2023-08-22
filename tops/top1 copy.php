@@ -12,6 +12,7 @@
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
+    <link rel="stylesheet" href="../css/modal-style.css">
     <title>Document</title>
 
     <!--====MAP====-->
