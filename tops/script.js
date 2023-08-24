@@ -25,6 +25,7 @@ searchInput.addEventListener('input', () => {
 const closeModalBtn = document.getElementById('closeModalBtn');
 const saveBtn = document.getElementById('saveBtn');
 const modal = document.getElementById('modal');
+const myForm = document.getElementById('myForm');
 
 addButton.addEventListener('click', () => {
   modal.style.display = 'flex';
@@ -38,8 +39,18 @@ closeModalBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
+myForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = new FormData(this);
+
+  fetch("../table/add.php", {
+    method: "POST",
+    body: formData
+  }).then(response => response.text())
+  .then(data => {
+      console.log(data); // Exibir a resposta do servidor
+  })
+  .catch(error => {
+      console.error("Erro:", error);
+  });
+})
