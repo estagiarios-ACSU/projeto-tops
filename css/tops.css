@@ -709,14 +709,14 @@ th {
     }
 }
 
-.login-section{
+.login-form{
     width: 30rem;
     height: 65%;
     padding: 3rem;
     border-radius: 8px;
 }
 
-section {
+form {
     display: flex;
     flex-direction: column;
 }
@@ -767,7 +767,7 @@ section {
     color: rgba(0, 0, 0, 0.5);
 }
 
-section input[type="submit"] {
+.bottom-button{
     margin-top: 2rem;
     margin-left:1.5rem;
     padding: 1rem;
@@ -783,6 +783,6 @@ section input[type="submit"] {
     border:none;
 }
 
-section input[type="submit"]:hover {
+form input[type="submit"]:hover {
     letter-spacing: 0.5px;
 }
