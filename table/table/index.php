@@ -22,9 +22,9 @@
     <div id="modal" class="modal">
         <div class="modal-content">
         <span class="close-button">&times;</span>
-                <div class="login-section">
+                <div class="login-form">
                     <h2 style="font-size:22pt">Preencha as Informações</h2>
-                        <section action="">
+                        <form id="myForm">
                             <div class="input-field">
                                 <input type="text" name="username" id="username" placeholder="Digite o Nome da Instituição" >
                             </div>
@@ -41,10 +41,10 @@
                                 <input type="text" name="text" id="text" placeholder="Digite o Endereço">
                             </div>
                             <div>
-                                <input type="submit" value="Cancelar" id="closeModalBtn">
-                                <input type="submit" value="Adicionar" id="saveBtn">
+                                <button class="bottom-button" id="closeModalBtn">Cancelar</button>
+                                <input class="bottom-button" type="submit" value="Adicionar" id="saveBtn">
                             </div>
-                        </section>
+                        </form>
                 </div>
         </div>
     </div>
