@@ -316,9 +316,10 @@
     <script src="../tops/top.js"></script>
     <script>
 
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+    var map = L.map('map').setView([-4.025915706046017, -38.74238728197363], 12.3);
 
-        var map = L.map('map').setView([-4.0306,-38.9209], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+    var marker = L.marker([-4.083222203734396, -38.792027297628636]).addTo(map)
 
         var marker = L.marker([-4.0287, -38.9257]).addTo(map)
         marker.bindPopup("<b>Top-8</b><br>Itapebussu").openPopup();
