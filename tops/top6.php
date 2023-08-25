@@ -12,8 +12,8 @@
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
-    <title>Document</title>
-
+    <title>Top6 Maranguape</title>
+    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">  
     <!--====MAP====-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="

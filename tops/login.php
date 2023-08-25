@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/login.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">
+    <title>Top Maranguape</title>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                 </form>
 
                 <div class="footer">
-                    <span>Não tem uma conta?</span><a href="">Criar conta</a>
+                    <span>Esqueceu Sua Senha?</span><a href="">Clique Aqui</a>
                 </div>
             </div>
         </div>
