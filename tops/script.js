@@ -10,7 +10,42 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.text())
         .then(data => {
             tableBody.innerHTML = data;
+
+            const row = document.getElementsByClassName('tr-perfil');
+            const instituicoes = document.getElementsByClassName('instituicao-nome');
+
+            for(let i = 1; i <= row.length;i++){
+              let delBtn = document.getElementById(`delBtn${i}`);
+
+              delBtn.addEventListener('click', () => {
+                const formData = new FormData();
+
+                formData.append('instituicao',instituicoes[i-1].innerHTML);
+                fetch("../table/del.php", {
+                  method: "POST",
+                  body: formData
+                }).then(response => response.text())
+                .then(data => {
+                    console.log(data); // Exibir a resposta do servidor
+                })
+                .catch(error => {
+                    console.error("Erro:", error);
+                });
+
+                fetch(`../table/data.php?search=${searchTerm}`)
+                .then(response => response.text())
+                .then(data => {
+                    tableBody.innerHTML = data;
+                });
+
+                
+              })
+            }
+
         });
+
+
+
 });
 
 searchInput.addEventListener('input', () => {
@@ -53,4 +88,15 @@ myForm.addEventListener('submit', function(event) {
   .catch(error => {
       console.error("Erro:", error);
   });
+})
+
+myForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const searchTerm = searchInput.value;
+  fetch(`../table/data.php?search=${searchTerm}`)
+      .then(response => response.text())
+      .then(data => {
+          tableBody.innerHTML = data;
+      });
+  modal.style.display = 'none';
 })
