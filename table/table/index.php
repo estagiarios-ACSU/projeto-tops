@@ -26,23 +26,23 @@
                     <h2 style="font-size:22pt">Preencha as Informações</h2>
                         <form id="myForm">
                             <div class="input-field">
-                                <input type="text" name="username" id="username" placeholder="Digite o Nome da Instituição" >
+                                <input type="text" name="instituicao" id="username" placeholder="Digite o Nome da Instituição" >
                             </div>
                             <div class="input-field">
-                                <input type="text" name="text" id="text" placeholder="Digite a Localidade">
+                                <input type="text" name="localidade" id="text" placeholder="Digite a Localidade">
                             </div>
                             <div class="input-field">
-                                <input type="text" name="text" id="text" placeholder="Digite a Natureza">
+                                <input type="text" name="natureza" id="text" placeholder="Digite a Natureza">
                             </div>
                             <div class="input-field">
-                                <input type="text" name="text" id="text" placeholder="Digite a Zona">
+                                <input type="text" name="zona" id="text" placeholder="Digite a Zona">
                             </div>
                             <div class="input-field">
-                                <input type="text" name="text" id="text" placeholder="Digite o Endereço">
+                                <input type="text" name="endereco" id="text" placeholder="Digite o Endereço">
                             </div>
                             <div>
                                 <button class="bottom-button" id="closeModalBtn">Cancelar</button>
-                                <input class="bottom-button" type="submit" value="Adicionar" id="saveBtn">
+                                <input name="btn" class="bottom-button" type="submit" value="Adicionar" id="saveBtn">
                             </div>
                         </form>
                 </div>
