@@ -13,6 +13,7 @@
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
     <link rel="stylesheet" href="../css/modal-style.css">
+    <link rel="stylesheet" href="../css/modal-upload.css">
     <title>Document</title>
 
     <!--====MAP====-->
@@ -177,18 +178,24 @@
 
                 <!--Download-->
                 <section class="download">
-                    <div class="content-top">
-                        <div>
+                <div>
                             <h1 title="Territorios Produtivos">Arquivos Para Download
                             </h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
+                        </div>
+                    <div class="content-top">
+                        <div>
+                        <?php
+                        include "../arquivos/index.php";
+                        ?>
+                        <script src="scripts.js"></script>
+                        
                         </div>
                         <div class="btn-exit">
                           <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
                       </div>
                 </section>
-
                 <!--Media-->
                 <section class="media">
                     <div class="content-top">
