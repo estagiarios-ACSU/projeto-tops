@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+$_SESSION["top"] = 5;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,8 +18,8 @@
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
-    <title>Top5 Maranguape</title>
-    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">  
+    <title>Document</title>
+
     <!--====MAP====-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
@@ -75,7 +81,7 @@
                     <li class="menu-items" onclick="colegiados()">
                         <a>Grupos Colegiados</a></li>
                     <li class="menu-items" onclick="calendario()">
-                        <a>Calendário TOP-5</a></li>
+                        <a href="calendarioR/index.php">Calendário TOP-5</a></li>
                     <li class="menu-items" onclick="download()">
                         <a>Arquivos Para Download</a></li>
                     <li class="menu-items" onclick="media()">
