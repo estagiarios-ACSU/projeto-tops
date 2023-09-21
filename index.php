@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (isset($_SESSION["admin"])){
+    if ($_SESSION["admin"] == "admin"){
+        // echo"<script>console.log('logado')</script>";
+        $_SESSION["admin"] = "logado";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
