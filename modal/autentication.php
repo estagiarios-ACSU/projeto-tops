@@ -12,11 +12,12 @@ if(isset($_POST['btn'])){
     $user->connectDb('top');
 
     if($user->getLoginAutentication('usuario')){
-        $_SESSION['admin'] = "pinho";
+        $_SESSION['admin'] = "admin";
         header("location:../index.php");
     }else{
-        session_destroy();
-        echo"valval";
+        session_destroy(); 
+        header("location:../index.php");
+        echo"<script>Alert(2)</script>";
         echo "vc n esta logado";
     }
 }
