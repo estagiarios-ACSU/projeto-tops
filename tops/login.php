@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">
-    <title>Top Maranguape</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -19,9 +18,9 @@
         <div class="container-left">
             <div class="login-form">
                 <h2>Login</h2>
-                <form action="">
+                <form method="POST" action="../modal/autentication.php">
                     <div class="input-field">
-                        <input type="email" name="username" id="username" placeholder="Digite seu E-mail" >
+                        <input type="email" name="email" id="username" placeholder="Digite seu E-mail" >
                         <div class="underline"></div>
                     </div>
                     <div class="input-field">
@@ -29,11 +28,11 @@
                         <div class="underline"></div>
                     </div>
 
-                    <input type="submit" value="Entrar">
+                    <input name="btn" type="submit" value="Entrar">
                 </form>
 
                 <div class="footer">
-                    <span>Esqueceu Sua Senha?</span><a href="">Clique Aqui</a>
+                    <span>Não tem uma conta?</span><a href="">Criar conta</a>
                 </div>
             </div>
         </div>
