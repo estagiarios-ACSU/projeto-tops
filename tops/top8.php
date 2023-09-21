@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+$_SESSION["top"] = 8;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,8 +18,8 @@
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
-    <title>Top8 Maranguape</title>
-    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">  
+    <title>Document</title>
+
     <!--====MAP====-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
@@ -75,7 +81,7 @@
                     <li class="menu-items" onclick="colegiados()">
                         <a>Grupos Colegiados</a></li>
                     <li class="menu-items" onclick="calendario()">
-                        <a>Calendário TOP-8</a></li>
+                        <a href="calendarioR/index.php">Calendário TOP-8</a></li>
                     <li class="menu-items" onclick="download()">
                         <a>Arquivos Para Download</a></li>
                     <li class="menu-items" onclick="media()">
@@ -316,10 +322,9 @@
     <script src="../tops/top.js"></script>
     <script>
 
-    var map = L.map('map').setView([-4.025915706046017, -38.74238728197363], 12.3);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
-    var marker = L.marker([-4.083222203734396, -38.792027297628636]).addTo(map)
+        var map = L.map('map').setView([-4.0306,-38.9209], 13);
 
         var marker = L.marker([-4.0287, -38.9257]).addTo(map)
         marker.bindPopup("<b>Top-8</b><br>Itapebussu").openPopup();
