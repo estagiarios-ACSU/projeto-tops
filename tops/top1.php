@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+$_SESSION["top"] = 1;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,14 +12,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
+
     <!--====SCROLL===-->
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
-    <title>Top1 Maranguape</title>
-    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">  
+    <title>Document</title>
+
     <!--====MAP====-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
@@ -75,7 +82,7 @@
                     <li class="menu-items" onclick="colegiados()">
                         <a>Grupos Colegiados</a></li>
                     <li class="menu-items" onclick="calendario()">
-                        <a>Calendário TOP-1</a></li>
+                        <a href="calendarioR/index.php">Calendário TOP-1</a></li>
                     <li class="menu-items" onclick="download()">
                         <a>Arquivos Para Download</a></li>
                     <li class="menu-items" onclick="media()">
@@ -243,7 +250,15 @@
                         <div class="btn-exit">
                           <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
-                      </div>
+                    </div>
+                
+                    <?php 
+                        $currentData = date('Y-m-d');
+                    ?>
+                    
+                    <div id='calendar-container'>
+                        <div id='calendar'></div>
+                    </div>
                 </section>
 
                 <!--Download-->
@@ -259,7 +274,7 @@
                         </div>
                       </div>
                 </section>
-                
+
                 <!--Media-->
                 <section class="media">
                     <div class="content-top">
@@ -331,6 +346,7 @@
         marker.bindPopup("<b>Top-1</b><br>Pau Serrado").openPopup();
         ;
     </script>
+</script>
 </body>
 
 </html>
