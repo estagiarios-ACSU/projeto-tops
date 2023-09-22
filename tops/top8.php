@@ -1,9 +1,3 @@
-<?php
-session_start();
-
-$_SESSION["top"] = 8;
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,8 +12,8 @@ $_SESSION["top"] = 8;
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
-    <title>Document</title>
-
+    <title>Top8 Maranguape</title>
+    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">  
     <!--====MAP====-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
@@ -81,11 +75,11 @@ $_SESSION["top"] = 8;
                     <li class="menu-items" onclick="colegiados()">
                         <a>Grupos Colegiados</a></li>
                     <li class="menu-items" onclick="calendario()">
-                        <a href="calendarioR/index.php">Calendário TOP-8</a></li>
+                        <a>Calendário TOP-8</a></li>
                     <li class="menu-items" onclick="download()">
                         <a>Arquivos Para Download</a></li>
                     <li class="menu-items" onclick="media()">
-                        <a>Media</a></li>
+                        <a>Mídia</a></li>
                 </ul>
             </div>
             <div class="content-right">
@@ -270,7 +264,7 @@ $_SESSION["top"] = 8;
                 <section class="media">
                     <div class="content-top">
                         <div>
-                            <h1 title="Territorios Produtivos">Media
+                            <h1 title="Territorios Produtivos">Mídia
                             </h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
@@ -322,9 +316,10 @@ $_SESSION["top"] = 8;
     <script src="../tops/top.js"></script>
     <script>
 
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+    var map = L.map('map').setView([-4.025915706046017, -38.74238728197363], 12.3);
 
-        var map = L.map('map').setView([-4.0306,-38.9209], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+    var marker = L.marker([-4.083222203734396, -38.792027297628636]).addTo(map)
 
         var marker = L.marker([-4.0287, -38.9257]).addTo(map)
         marker.bindPopup("<b>Top-8</b><br>Itapebussu").openPopup();
