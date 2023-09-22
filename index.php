@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if (isset($_SESSION["admin"])){
+    if ($_SESSION["admin"] == "admin"){
+        // echo"<script>console.log('logado')</script>";
+        $_SESSION["admin"] = "logado";
+    }
+}else{
+    $_SESSION["admin"] = "deslogado";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -68,7 +82,13 @@
 
                 <p id="texto_top_2">O projeto TOP (Territorios Organizados Produtivos) se trata de uma regionalização e divisão Municipal
                     para que ... Clique na TOP a baixo e você será direcionado para algumas informações sobre o local. </p>
-            <a href="tops/login.php"><button class="bn632-hover bn18">Login</button></a>
+            <?php
+                if ($_SESSION["admin"] == "logado") { 
+                    echo"<a href='modal/deslogar.php'><button name='btn_deslogar' class='bn632-hover bn18'>Deslogar</button></a>";
+                } else{
+                    echo"<a href='tops/login.php'><button class='bn632-hover bn18'>Login</button></a>";
+                }
+            ?>
         </div>
 
         <div class="map-img">
