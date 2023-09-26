@@ -147,7 +147,7 @@ if (isset($_SESSION["admin"])){
     <h1 id="text-test"></h1>
     </div>
 
-    <section class="territorios">
+     <section class="territorios">
         
         <div class="top_1">
             <div class="top_1_img">
@@ -157,7 +157,7 @@ if (isset($_SESSION["admin"])){
                 <div class="top1">
                     <h1>Top 1</h1>
                     <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado...</p>
-                    <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top1.php">Entrar</a></button>
+                    <a style="color: #fff; text-decoration: none;" href="tops/top1.php"><button class="bn632-hover bn18">Entrar</button></a>
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@ if (isset($_SESSION["admin"])){
                         <h1>Top 2</h1>
                         <p>Área Seca...</p>
                     </div>
-                    <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top2.php">Entrar</a></button>
+                    <a style="color: #fff; text-decoration: none;" href="tops/top2.php"><button class="bn632-hover bn18">Entrar</button></a>
                 </div>    
         </div>
 
@@ -183,7 +183,7 @@ if (isset($_SESSION["admin"])){
                 <div class="top3">
                     <h1>Top 3</h1>
                     <p>Parque das Rosas, Gavião, Centro, Fórum, Parque Santa Fé, Guabi, Guabiraba, Pirapora, Preguiça...</p>
-                    <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top3.php">Entrar</a></button>
+                    <a style="color: #fff; text-decoration: none;" href="tops/top3.php"><button class="bn632-hover bn18">Entrar</button></a>
                 </div>
             </div>
         </div>
@@ -196,7 +196,7 @@ if (isset($_SESSION["admin"])){
                 <div class="top4">
                     <h1>Top 4</h1>
                     <p>Aldeoma, Novo Parque Iracema, Tangueira, Pato Selvagem, Parque São João, Coité, Parque Iracema, Santos Dumont...</p>
-                    <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top4.php">Entrar</a></button>
+                    <a style="color: #fff; text-decoration: none;" href="tops/top4.php"><button class="bn632-hover bn18">Entrar</button></a>
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@ if (isset($_SESSION["admin"])){
                 <div class="top_1_text">            
                         <h1>Top 5</h1>
                         <p>Sapupara, Ladeira Grande, Urucará, Trapiá, Gereraú, Penedo, Tabatinga...</p>
-                        <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top5.php">Entrar</a></button>
+                        <a style="color: #fff; text-decoration: none;" href="tops/top5.php"><button class="bn632-hover bn18">Entrar</button></a>
             </div>    
                 </div>
         </div>
@@ -222,7 +222,7 @@ if (isset($_SESSION["admin"])){
                 <div class="top6">
                     <h1>Top 6</h1>
                     <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande...</p>
-                    <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top6.php">Entrar</a></button>
+                    <a style="color: #fff; text-decoration: none;" href="tops/top6.php"><button class="bn632-hover bn18">Entrar</button></a>
                 </div>
             </div>
         </div>
@@ -235,7 +235,7 @@ if (isset($_SESSION["admin"])){
                 <div class="top7">
                     <h1>Top 7</h1>
                     <p>Tanques, Cajueiro, Forquilha, Amanari, Retiro, São João do Amanari, Melão, Vassoura, Assentamento Salgado...</p>
-                    <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top7.php">Entrar</a></button>
+                    <a style="color: #fff; text-decoration: none;" href="tops/top7.php"><button class="bn632-hover bn18">Entrar</button></a>
                 </div>
             </div>
         </div>
@@ -248,7 +248,7 @@ if (isset($_SESSION["admin"])){
                 <div class="top8">
                     <h1>Top 8</h1>
                     <p>Itapebussu, Rato, Lagoa do Juvenal, Manuel Guedes, Vertentes do Lagedo, Antônio Marques, Boqueirão...</p>
-                    <button class="bn632-hover bn18"><a style="color: #fff; text-decoration: none;" href="tops/top8.php">Entrar</a></button>
+                    <a style="color: #fff; text-decoration: none;" href="tops/top8.php"><button class="bn632-hover bn18">Entrar</button></a>
                     </div>
             </div>
         </div>
