@@ -13,6 +13,7 @@ if(isset($_POST['btn'])){
 
     if($user->getLoginAutentication('usuario')){
         $_SESSION['admin'] = "admin";
+        $_SESSION['email'] = $email;
         header("location:../index.php");
     }else{
         session_destroy(); 
