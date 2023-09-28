@@ -30,8 +30,11 @@ if (isset($_SESSION["admin"])){
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="assets/brasao.png" type="image/x-icon">
-    <title>Top Maranguape</title>
+
+    <!-- Sweetalert -->
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+
+    <title>Document</title>
 
 </head>
 
@@ -63,10 +66,66 @@ if (isset($_SESSION["admin"])){
 
         <nav class="menu">
             <ul>
+                <?php
+                    if ($_SESSION["admin"] == "logado") {
+                            if (isset($_SESSION["email"])){
+                            include "modal/Conn.php";
+                        
+                            $conn = new Conn("top");
+                            $conexao = $conn->connectDb("top");
+
+                            $session_email = $_SESSION['email'];
+                            $query = "SELECT email FROM usuario WHERE email = '$session_email'";
+                            $result = $conexao->query($query);
+                            $result->execute();
+
+                        
+                            $array = $result->fetchall(PDO::FETCH_ASSOC);
+                            foreach($array as $row){
+                                extract($row);
+                                $email_user = $email;
+                                // echo "<script>alert('$email_user')</script>";
+                            }
+
+                            echo "<li class='user_logado'>User logado: $email_user</li>";
+                        }
+
+                    }
+                ?>
                 <a href="index.php"><li>Home</li></a>
                 <a href="menu/sobre.php"><li>Sobre</li></a>
                 <a href="menu/agenda.php"><li>Agenda</li></a>
-                <a href="#contato"><li>Contato</li></a>
+                <li class="login">
+                <?php
+                if ($_SESSION["admin"] == "logado") { 
+                    echo"
+                    <button id='btn_deslogar' name='btn_deslogar' class='bn632-hover bn18'>Deslogar</button>       
+                    <script>
+                    let button = document.getElementById('btn_deslogar')
+                    
+                    button.onclick = function() {
+                        Swal.fire({
+                                title: 'Você tem certeza que quer sair da sua conta?',
+                                icon: 'warning',
+                                showCancelButton: true,
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: 'Sair',
+                                cancelButtonText: 'Cancelar',
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href = 'modal/deslogar.php';
+                                    }
+                                })
+                    }
+                    // console.log  (a)
+                    </script>";
+                        
+                    } else{
+                        echo"<a href='tops/login.php'><button class='bn632-hover bn18'>Login</button></a>";
+                    }
+                ?>
+                </li>
             </ul>
         </nav>
     </header>
@@ -82,13 +141,6 @@ if (isset($_SESSION["admin"])){
 
                 <p id="texto_top_2">O projeto TOP (Territorios Organizados Produtivos) se trata de uma regionalização e divisão Municipal
                     para que ... Clique na TOP a baixo e você será direcionado para algumas informações sobre o local. </p>
-            <?php
-                if ($_SESSION["admin"] == "logado") { 
-                    echo"<a href='modal/deslogar.php'><button name='btn_deslogar' class='bn632-hover bn18'>Deslogar</button></a>";
-                } else{
-                    echo"<a href='tops/login.php'><button class='bn632-hover bn18'>Login</button></a>";
-                }
-            ?>
         </div>
 
         <div class="map-img">
@@ -147,9 +199,10 @@ if (isset($_SESSION["admin"])){
     <h1 id="text-test"></h1>
     </div>
 
-     <section class="territorios">
+    
+    <section class="territorios">
         
-        <div class="top_1">
+    <div class="top_1">
             <div class="top_1_img">
                 <img src="assets/areaverde.png" alt="" height="250px" width="300px">
             </div>
@@ -253,6 +306,7 @@ if (isset($_SESSION["admin"])){
             </div>
         </div>
     </section>
+
 
     <footer>
         <div class="container-msg">
