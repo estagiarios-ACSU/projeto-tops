@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 * {
     padding: 0;
     margin: 0;
@@ -25,14 +26,56 @@ a{
 .nav-bar {
     background: #fff;
     width: 100%;
-    height: 70px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 3rem;
+    padding-bottom: 2rem;
     text-decoration: none;
 }
+
+/* Butão de login do cabeçalho */
+.login .bn632-hover {
+    width: 6.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #002e5b;
+    cursor: pointer;
+    margin-top: -1rem;
+    height: 2.4rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.125rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+    background-image: linear-gradient(
+        to right,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+    );
+}
+button.bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 600;
+}
+
+.user_logado {
+    text-decoration: underline;
+}
+
 
 /*.line {
     background-image: linear-gradient(
@@ -183,7 +226,8 @@ li:hover {
 /*==== MAIN ====*/
 .container {
     width: 100%;
-    margin: 4rem;
+    margin-left: 6rem;
+    margin-bottom: 6rem;  
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -192,6 +236,7 @@ li:hover {
 
 .content-left { 
     width: 90%;
+    margin-bottom: 12rem;
 }
 
 #texto_top_2{
@@ -218,25 +263,85 @@ li:hover {
     margin-top: 0.625rem;
     color: #666d72;
 }
+
 /*=== BUTTON ===*/
-.content-left .bn632-hover {
-    width: 12.5rem;
+
+/* Button swal */
+button.swal2-confirm.swal2-styled{
+    width: 6.3rem;
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    margin-top: 1.25rem;
-    height: 3.4375rem;
+    /* margin-top: 1.25rem; */
+    height: 3.5rem;
     text-align:center;
     border: none;
+    outline: none;
     background-size: 300% 100%;
-    border-radius: 3.125rem;
+    border-radius: 3.1rem;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     font-weight: 300;
-  }
+
+    background-image: linear-gradient(
+        to right,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+    );
+}
+button.swal2-confirm.swal2-styled:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 800
+}
+
+
+button.swal2-cancel.swal2-styled{
+    width: 6.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #6e7881;
+    color: #fff;
+    cursor: pointer;
+    /* margin-top: 1.25rem; */
+    height: 3.5rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+
+    
+    background-image: linear-gradient(
+        to right,
+        #392b2b03,
+        #2f1f1f00,
+        #3f2c2c02,
+        #1c12120a
+    );
+}
+button.swal2-cancel.swal2-styled:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 800
+}
+
+/* end button swal */
 
 .content-left .bn632-hover:hover {
     background-position: 100% 0;
@@ -263,7 +368,7 @@ li:hover {
 
 .map-img {
     width: 100%;
-    margin-right: 6.25rem;
+    margin-right: 9rem;
     height: 80%;
 }
 
@@ -272,7 +377,7 @@ li:hover {
 }
 
 svg {
-    width: 90%;
+    width: 100%;
     fill: #ffffff;
 }
 
@@ -283,7 +388,6 @@ svg path:hover {
 svg path {
     fill: #2874fc;
 }
-  
 
 /*===== CONTEUDO ====*/
 
@@ -306,6 +410,7 @@ svg path {
     gap: 5rem;
     padding: 2rem;
     margin-bottom: 10rem;
+    margin-top: -10rem;
 }
 
 .top_1{
