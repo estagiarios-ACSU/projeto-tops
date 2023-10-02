@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+  
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .button {
+    padding: 0.6rem 1.2rem;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+  }
+  
+  #abrir-coisa {
+    background-color: #007bff;
+    padding: 0.6rem 1.2rem;
+    width: 150px;
+    color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+    
+  }
+
+  
+  button:hover {
+    opacity: 1;
+  }
+  
+  #fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+  
+  #modal1 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }
+  
+  #fade,
+  #modal1 {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #007bff;
+    
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    height: 100px;
+    font-weight: 600;
+    
+  }
+
+  .titulo-modal{
+    text-align: center;
+    align-items: center;
+  }
+  
+  #modal1.hide,
+  #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+    background-color: #007bff;
+  }
+  
+  #modal1.hide {
+    top: 0;
+  }
+
+  /* //BOTÃO SUBMIT DO FORM//*/
+  .btna {
+    width: 7rem;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    height: 2.5rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+    background-color: #007bff;
+  }
+
+.btna:hover {
+    background-position: 100% 0;
+   
+    transition: all .4s ease-in-out;
+  }
+  
+.btna:focus {
+    outline: none;
+  }
+  
+
+   
+  
+
+  
+    form input[type="submit"]:hover {
+        letter-spacing: 0.5px;
+    }
+
+    .close-form{
+      width: 7rem;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 1rem;
+      height: 2.5rem;
+      text-align:center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 3rem;
+     background-color: #FF0000;
+      font-weight: 300;
+    }
+
+    .close-form:hover {
+      background-position: 100% 0;
+     
+      transition: all .4s ease-in-out;
+      letter-spacing: 0.5px;
+    }
+
+/* // DIV DOS INPUT// */
+  .modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+
+  .file{
+        position: relative;
+        width: 250px;
+    }
+
+    .file input{
+        width: 15rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        outline: none;
+        background-color: #fff;
+        font-size: 1rem;
+    }
+
+
+    .nome{
+        width: 20rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border: 2px solid #007bff;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        color: black;
+    
+      }
+
+      .btns {
+        flex-direction: row;
+      }
+
+/* //CSS DO BOTÃO DE FILE//*/
+
+input[type="file"]{
+    display: none;
+  }
+
+ .arquivo{
+      width: 15rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border: 2px solid #00aeff;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+    }
+
+    label span:nth-child(2){
+      color: #fff;
+      background-color: #00aeff;
+      padding: 1rem;
+      height: 2rem;
+      font-size: 1rem;
+      border-radius: .3rem;
+      -webkit-border-radius: .3rem;
+      -moz-border-radius: .3rem;
+      -ms-border-radius: .3rem;
+      -o-border-radius: .3rem;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+
+    }
