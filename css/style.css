@@ -414,67 +414,52 @@ svg path {
 
 .territorios{
     width: 100%;
+    margin-bottom: 10%;
+}
+
+.tops{
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5rem;
-    padding: 2rem;
-    margin-bottom: 10rem;
-    margin-top: -10rem;
 }
 
-.top_1{
+.tops .top{
     width: 20%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     flex-direction: column;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 20px rgb(156, 156, 156);
     border-radius: 20px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 10%;
+    align-items: center;
 }
 
-.top_1_img{
+.top img{
     width: 100%;
-}
-
-.top_1 img{
-    width: 100%;
+    height: 19rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.top_1_text{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.75rem;
-    background-color: #fff;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 1rem;
-}
-
-.top_1_text h1 {
+.top h1{
     color: #002e5b;
+    margin-bottom: 10px;
 }
 
-.top_1_text p {
-    color: #666d72;;
+.top p{
+    color: #616161;
 }
 
-.territorios .bn632-hover {
+  .top .btn{
     width: 10rem;
     font-size: 1.40rem;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    margin-top: 1.25rem;
     height: 7vh;
+    margin-top: 20px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
@@ -483,33 +468,24 @@ svg path {
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    font-weight: 300;
     margin-bottom: 2rem;
+    background-image: linear-gradient(
+        to right,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+      );
+      box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
   }
 
-.territorios  .bn632-hover:hover {
+.top  .btn:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
   }
-  
-.territorios  .bn632-hover:focus {
-    outline: none;
-  }
-  
-.territorios  .bn632-hover.bn18 {
-    background-image: linear-gradient(
-      to right,
-      #2874fc,
-      #5496ec,
-      #1b61e2,
-      #502bb6
-    );
-    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
-  }
-
 
 /*====FOOTER====*/
 
