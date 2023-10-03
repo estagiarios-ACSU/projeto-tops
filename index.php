@@ -1,18 +1,18 @@
-    <?php
-    session_start();
+<?php
+session_start();
 
-    if (isset($_SESSION["admin"])){
-        if ($_SESSION["admin"] == "admin"){
-            // echo"<script>console.log('logado')</script>";
-            $_SESSION["admin"] = "logado";
-        }
-    }else{
-        $_SESSION["admin"] = "deslogado";
+if (isset($_SESSION["admin"])){
+    if ($_SESSION["admin"] == "admin"){
+        // echo"<script>console.log('logado')</script>";
+        $_SESSION["admin"] = "logado";
     }
+}else{
+    $_SESSION["admin"] = "deslogado";
+}
 
-    ?>
+?>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="pt-br">
 
     <head>
@@ -46,9 +46,9 @@
             </div>
 
             <?php
-                        if ($_SESSION["admin"] == "logado") {
-                            echo "<a href='modal/cad_admin.php' class='cad_admin'>Cadastrar <br>admin</a>";
-                        }
+                if ($_SESSION["admin"] == "logado") {
+                    echo "<div class='cad_admin'><a href='modal/cad_admin.php'><img src='./assets/icons/laura.png' alt='logo-mpe'></a></div>";
+                }
             ?>
 
             <div class="hamburger-menu">
