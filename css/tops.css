@@ -111,6 +111,23 @@ li:hover {
     color: #2874fc;
 }
 
+
+/* img cadastro de admin */
+
+.cad_admin{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20%;
+    top: 1.2%
+}
+
+.cad_admin img{
+    width: 80px;
+    height: 70px;
+}
+
+
 /*---- Aqui começa a estilização do HAMBURGUER MENU ----*/
 
 .hamburger-menu{
