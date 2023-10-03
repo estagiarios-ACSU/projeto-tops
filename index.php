@@ -206,111 +206,57 @@
 
         
         <section class="territorios">
-            
-        <div class="top_1">
-                <div class="top_1_img">
-                    <img src="assets/areaverde.png" alt="" height="250px" width="300px">
-                </div>
-                <div class="top_1_text">
-                    <div class="top1">
-                        <h1>Top 1</h1>
-                        <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado...</p>
-                        <a style="color: #fff; text-decoration: none;" href="tops/top1.php"><button class="bn632-hover bn18">Entrar</button></a>
-                    </div>
-                </div>
+        <div class="tops">
+            <div class="top">
+                <img src="assets/areaverde.png">
+                <h1>Top 1</h1>
+                <p>Area Verde, Outra Banda...</p>
+                <a href="tops/top1.php"><button class="btn">Entrar</button></a>
             </div>
-
-            <div class="top_1">
-                    <div class="top_1_img">
-                        <img src="assets/areaseca.png" alt="" height="250px" width="300px">
-                    </div>
-                    <div class="top_1_text">
-                        <div class="top2">
-                            <h1>Top 2</h1>
-                            <p>Área Seca...</p>
-                        </div>
-                        <a style="color: #fff; text-decoration: none;" href="tops/top2.php"><button class="bn632-hover bn18">Entrar</button></a>
-                    </div>    
+            <div class="top">
+                <img src="assets/areaseca.png">
+                <h1>Top 2</h1>
+                <p>Area Seca, Proube...</p>
+                <a href="tops/top2.php"><button class="btn">Entrar</button></a>
             </div>
-
-            <div class="top_1">
-                <div class="top_1_img">
-                    <img src="assets/centro.png" alt="" height="250px" width="300px">
-                </div>
-                <div class="top_1_text">
-                    <div class="top3">
-                        <h1>Top 3</h1>
-                        <p>Parque das Rosas, Gavião, Centro, Fórum, Parque Santa Fé, Guabi, Guabiraba, Pirapora, Preguiça...</p>
-                        <a style="color: #fff; text-decoration: none;" href="tops/top3.php"><button class="bn632-hover bn18">Entrar</button></a>
-                    </div>
-                </div>
+            <div class="top">
+                <img src="assets/centro.png">
+                <h1>Top 3</h1>
+                <p>Centro, Parque Santa Fé...</p>
+                <a href="tops/top3.php"><button class="btn">Entrar</button></a>
             </div>
-
-            <div class="top_1">
-                <div class="top_1_img">
-                    <img src="assets/top4.png" alt="" height="250px" width="300px">
-                </div>
-                <div class="top_1_text">
-                    <div class="top4">
-                        <h1>Top 4</h1>
-                        <p>Aldeoma, Novo Parque Iracema, Tangueira, Pato Selvagem, Parque São João, Coité, Parque Iracema, Santos Dumont...</p>
-                        <a style="color: #fff; text-decoration: none;" href="tops/top4.php"><button class="bn632-hover bn18">Entrar</button></a>
-                    </div>
-                </div>
+            <div class="top">
+                <img src="assets/top4.png">
+                <h1>Top 4</h1>
+                <p>Santos Dumont, Parque Iracema...</p>
+                <a href="tops/top4.php"><button class="btn">Entrar</button></a>
             </div>
-
-            <div class="top_1">
-                <div class="top5">
-                    <div class="top_1_img">
-                        <img src="assets/tabatinga.jpg" alt="" height="250px" width="300px">
-                    </div>
-                    <div class="top_1_text">            
-                            <h1>Top 5</h1>
-                            <p>Sapupara, Ladeira Grande, Urucará, Trapiá, Gereraú, Penedo, Tabatinga...</p>
-                            <a style="color: #fff; text-decoration: none;" href="tops/top5.php"><button class="bn632-hover bn18">Entrar</button></a>
-                </div>    
-                    </div>
+            <div class="top">
+                <img src="assets/tabatinga.jpg">
+                <h1>Top 5</h1>
+                <p>Sapupara, Ladeira Grande...</p>
+                <a href="tops/top5.php"><button class="btn">Entrar</button></a>
             </div>
-
-            <div class="top_1">
-                <div class="top_1_img">
-                    <img src="assets/umarizeiras.png" alt="" height="250px" width="300px">
-                </div>
-                <div class="top_1_text">
-                    <div class="top6">
-                        <h1>Top 6</h1>
-                        <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande...</p>
-                        <a style="color: #fff; text-decoration: none;" href="tops/top6.php"><button class="bn632-hover bn18">Entrar</button></a>
-                    </div>
-                </div>
+            <div class="top">
+                <img src="assets/umarizeiras.png">
+                <h1>Top 6</h1>
+                <p>Umarizeiras, Jubaia...</p>
+                <a href="tops/top6.php"><button class="btn">Entrar</button></a>
             </div>
-
-            <div class="top_1">
-                <div class="top_1_img">
-                    <img src="assets/ama.png" alt="" height="250px" width="300px"> 
-                </div>
-                <div class="top_1_text">
-                    <div class="top7">
-                        <h1>Top 7</h1>
-                        <p>Tanques, Cajueiro, Forquilha, Amanari, Retiro, São João do Amanari, Melão, Vassoura, Assentamento Salgado...</p>
-                        <a style="color: #fff; text-decoration: none;" href="tops/top7.php"><button class="bn632-hover bn18">Entrar</button></a>
-                    </div>
-                </div>
+            <div class="top">
+                <img src="assets/ama.png">
+                <h1>Top 7</h1>
+                <p>Amanari, Tanques...</p>
+                <a href="tops/top7.php"><button class="btn">Entrar</button></a>
             </div>
-
-            <div class="top_1">
-                <div class="top_1_img">
-                    <img src="assets/itapebussu.jpg" alt="" height="250px" width="300px">
-                </div>
-                <div class="top_1_text">
-                    <div class="top8">
-                        <h1>Top 8</h1>
-                        <p>Itapebussu, Rato, Lagoa do Juvenal, Manuel Guedes, Vertentes do Lagedo, Antônio Marques, Boqueirão...</p>
-                        <a style="color: #fff; text-decoration: none;" href="tops/top8.php"><button class="bn632-hover bn18">Entrar</button></a>
-                        </div>
-                </div>
+             <div class="top">
+                <img src="assets/itapebussu.jpg">
+                <h1>Top 8</h1>
+                <p>Itapebussu, Lagoa do Juvenal...</p>
+                <a href="tops/top8.php"><button class="btn">Entrar</button></a> 
             </div>
-        </section>
+        </div>
+    </section>
 
 
         <footer>
