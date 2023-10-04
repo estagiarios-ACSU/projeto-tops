@@ -67,7 +67,7 @@ $_SESSION["top"] = 4;
         </div>
 
         <nav class="menu">
-             <ul>
+            <ul>
                 <?php
                     if ($_SESSION["admin"] == "logado") {
                             if (isset($_SESSION["email"])){
@@ -149,7 +149,9 @@ $_SESSION["top"] = 4;
                         echo"<a href='login.php'><button class='bn632-hover bn18'>Login</button></a>";
                     }
                 ?>
+                </li>
             </ul>
+        </nav>
     </header>
 
     <!--====MAIN====-->
