@@ -7,7 +7,9 @@ if(isset($_POST['btn'])){
     $email = $_POST['email'];
     $senha = $_POST['password'];
 
-    $user = new User($email,$senha,'top');
+    $user = new User($email, $senha, 'top');
+
+    $user->connectDb('top');
     
     $adminM = $user->adminMaster('usuario');
     $admin = $user->getLoginAutentication('usuario');
