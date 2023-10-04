@@ -90,6 +90,28 @@ $_SESSION["top"] = 5;
                             }
 
                             echo "<li class='user_logado'>User logado: $email_user</li>";
+                        } else if ($_SESSION["adminMaster"] == "logado"){
+                            if (isset($_SESSION["email"])){
+                                include "../modal/Conn.php";
+                            
+                                $conn = new Conn("top");
+                                $conexao = $conn->connectDb("top");
+
+                                $session_email = $_SESSION['email'];
+                                $query = "SELECT email FROM usuario WHERE email = '$session_email'";
+                                $result = $conexao->query($query);
+                                $result->execute();
+
+                            
+                                $array = $result->fetchall(PDO::FETCH_ASSOC);
+                                foreach($array as $row){
+                                    extract($row);
+                                    $email_user = $email;
+                                    // echo "<script>alert('$email_user')</script>";
+                                }
+
+                                echo "<li class='user_logado'>User logado: $email_user</li>";
+                            }
                         }
 
                     }
@@ -99,7 +121,7 @@ $_SESSION["top"] = 5;
                 <a href="menu/agenda.php"><li>Agenda</li></a>
                 <li class="login">
                 <?php
-                if ($_SESSION["admin"] == "logado") { 
+                if ($_SESSION["admin"] == "logado" || $_SESSION["adminMaster"] == "logado") { 
                     echo"
                     <button id='btn_deslogar' name='btn_deslogar' class='bn632-hover bn18'>Deslogar</button>       
                     <script>
@@ -127,7 +149,6 @@ $_SESSION["top"] = 5;
                         echo"<a href='login.php'><button class='bn632-hover bn18'>Login</button></a>";
                     }
                 ?>
-                </li>
             </ul>
         </nav>
     </header>
