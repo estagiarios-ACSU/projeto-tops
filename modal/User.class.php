@@ -28,6 +28,28 @@ class User extends Conn{
         }
         return $signed;
     }
+
+    public function adminMaster($table){
+        //Seleciona todos os dados da tabela.
+        $query = "SELECT * FROM $table WHERE admin = 'ADMaster'";
+        $result = $this->connection->query($query);
+
+        $admin = False;
+
+        //Percorre os dados.
+        foreach($result as $row){
+
+            echo $row['email'];
+            //verifica se nos campos 'email' e 'senha' tem um dado igual os dos atributos.
+            if($row['email'] == $this->email && $row['senha'] == $this->password){
+                // if($row['admin'] == '1'){
+                //     $admin = True;
+                // }
+                $admin = True;
+            }
+        }
+        return $admin;
+    }
 }
 
 ?>
