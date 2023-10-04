@@ -161,8 +161,16 @@ $_SESSION["top"] = 8;
                           <p>Itapebussu, Rato, Lagoa do juvenal, Manuel guedes, Vertentes do lagedo, Antônio Marques, Boqueirão</p>
                       </div>
                       <div class="btn-exit">
-                        <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                      </div>
+                      <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top8.php">Top 8</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top6.php">Top 6</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                        </select>
                     </div>
                     <div class="content-half">
                         <div class="cont-half">
@@ -191,8 +199,16 @@ $_SESSION["top"] = 8;
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+                      <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top8.php">Top 8</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top6.php">Top 6</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                        </select>
                       </div>
                 </section>
                 <!--====Perfil do Território====-->
@@ -203,8 +219,16 @@ $_SESSION["top"] = 8;
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+                      <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top8.php">Top 8</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top6.php">Top 6</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                        </select>
                     </div>
 
                     <div class="content-equipments">
@@ -298,8 +322,16 @@ $_SESSION["top"] = 8;
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+                      <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top8.php">Top 8</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top6.php">Top 6</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                        </select>
                       </div>
                 </section>
 
@@ -311,8 +343,16 @@ $_SESSION["top"] = 8;
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+                      <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top8.php">Top 8</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top6.php">Top 6</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                        </select>
                       </div>
                 </section>
 
@@ -325,8 +365,16 @@ $_SESSION["top"] = 8;
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+                      <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top8.php">Top 8</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top6.php">Top 6</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                        </select>
                       </div>
                 </section>
 
@@ -339,8 +387,16 @@ $_SESSION["top"] = 8;
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+                      <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top8.php">Top 8</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top6.php">Top 6</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                        </select>
                       </div>
                 </section>
                 
