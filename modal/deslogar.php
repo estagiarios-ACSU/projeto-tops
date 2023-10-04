@@ -20,7 +20,7 @@ font-family: 'Outfit', sans-serif;
 <script>   
 swal.fire({
     position: 'center',
-    // icon: 'success',
+    icon: 'success',
     title: 'CONTA DESLOGADA',
     showConfirmButton: true,
     confirmButtonText: 'Voltar',
