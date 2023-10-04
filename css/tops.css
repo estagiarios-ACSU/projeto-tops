@@ -451,7 +451,40 @@ button.swal2-cancel.swal2-styled:hover {
     );
     box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
   }
+.content-top .lista-tops {
+    background-image: linear-gradient(
+      to right,
+      #2874fc,
+      #5496ec,
+      #1b61e2,
+      #502bb6
+    );
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  }
 
+.content-top .lista-tops{
+    border-radius: 15px;
+    width: 6.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    height: 3rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;   
+}
+
+.content-top .lista-tops option{
+background-color: #2874fc;
+font-size: 13px;
+}
 .content-half {
     display: flex;
     gap: 3rem;
