@@ -149,6 +149,7 @@ $_SESSION["top"] = 2;
                         echo"<a href='login.php'><button class='bn632-hover bn18'>Login</button></a>";
                     }
                 ?>
+                </li>
             </ul>
         </nav>
     </header>
