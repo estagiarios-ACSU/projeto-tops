@@ -163,8 +163,17 @@ $_SESSION["top"] = 6;
                           <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
                       </div>
                       <div class="btn-exit">
-                        <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                      </div>
+                        <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top6.php">Top 6</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                            <option value="top8.php">Top 8</option></a>
+                        </select>
+                        </div>
                     </div>
                     <div class="content-half">
                         <div class="cont-half">
@@ -193,7 +202,16 @@ $_SESSION["top"] = 6;
                             <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top6.php">Top 6</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                            <option value="top8.php">Top 8</option></a>
+                        </select>
                         </div>
                       </div>
                 </section>
@@ -205,7 +223,16 @@ $_SESSION["top"] = 6;
                             <p></p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top6.php">Top 6</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                            <option value="top8.php">Top 8</option></a>
+                        </select>
                         </div>
                     </div>
 
@@ -300,7 +327,16 @@ $_SESSION["top"] = 6;
                             <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top6.php">Top 6</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                            <option value="top8.php">Top 8</option></a>
+                        </select>
                         </div>
                       </div>
                 </section>
@@ -313,7 +349,16 @@ $_SESSION["top"] = 6;
                             <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top6.php">Top 6</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                            <option value="top8.php">Top 8</option></a>
+                        </select>
                         </div>
                       </div>
                 </section>
@@ -327,7 +372,16 @@ $_SESSION["top"] = 6;
                             <p></p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top6.php">Top 6</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                            <option value="top8.php">Top 8</option></a>
+                        </select>
                         </div>
                       </div>
                 </section>
@@ -341,7 +395,16 @@ $_SESSION["top"] = 6;
                             <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
                         </div>
                         <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        <select class="lista-tops" onchange="location = this.value;">
+                            <option value="top6.php">Top 6</option>
+                            <option value="top1.php">Top 1</option></a>
+                            <option value="top2.php">Top 2</option></a>
+                            <option value="top3.php">Top 3</option></a>
+                            <option value="top4.php">Top 4</option></a>
+                            <option value="top5.php">Top 5</option></a>
+                            <option value="top7.php">Top 7</option></a>
+                            <option value="top8.php">Top 8</option></a>
+                        </select>
                         </div>
                       </div>
                 </section>
