@@ -44,7 +44,8 @@ $_SESSION["top"] = 6;
         <?php
             if ($_SESSION["admin"] == "logado") {
                 echo "<div class='cad_admin'><a href='../modal/cad_admin.php'><img src='../assets/icons/admin.png' alt='logo-mpe'></a></div>";
-            }
+               echo "<script>document.getElementsByClassName('logo')[0].style.marginLeft = '20px'; </script>";
+             }
         ?>
 
         <div class="hamburger-menu">
