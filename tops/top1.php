@@ -151,6 +151,7 @@ $_SESSION["top"] = 1;
                 ?>
                 </li>
             </ul>
+        </nav>
     </header>
 
     <!--====MAIN====-->
