@@ -1,6 +1,15 @@
 <?php
 session_start();
 
+if (isset($_SESSION["adminMaster"])){
+    if ($_SESSION["adminMaster"] == "Master"){
+        $_SESSION["adminMaster"] = "logado";
+    }
+} else{
+    // echo"<script>console.log('nao logado')</script>";
+    $_SESSION["adminMaster"] = "deslogado";
+}   
+
 if (isset($_SESSION["admin"])){
     if ($_SESSION["admin"] == "admin"){
         // echo"<script>console.log('logado')</script>";
@@ -46,7 +55,7 @@ if (isset($_SESSION["admin"])){
             </div>
 
             <?php
-                if ($_SESSION["admin"] == "logado") {
+                if ($_SESSION["adminMaster"] == "logado") {
                     echo "<div class='cad_admin'><a href='modal/cad_admin.php'><img src='./assets/icons/laura.png' alt='logo-mpe'></a></div>";
                     echo "<script>document.getElementsByClassName('logo')[0].style.marginLeft = '20px'; </script>";
                 }
@@ -95,15 +104,36 @@ if (isset($_SESSION["admin"])){
 
                                 echo "<li class='user_logado'>User logado: $email_user</li>";
                             }
+                        } else if ($_SESSION["adminMaster"] == "logado"){
+                            if (isset($_SESSION["email"])){
+                                    include "modal/Conn.php";
+                                
+                                    $conn = new Conn("top");
+                                    $conexao = $conn->connectDb("top");
 
-                        }
+                                    $session_email = $_SESSION['email'];
+                                    $query = "SELECT email FROM usuario WHERE email = '$session_email'";
+                                    $result = $conexao->query($query);
+                                    $result->execute();
+
+                                
+                                    $array = $result->fetchall(PDO::FETCH_ASSOC);
+                                    foreach($array as $row){
+                                        extract($row);
+                                        $email_user = $email;
+                                        // echo "<script>alert('$email_user')</script>";
+                                    }
+
+                                    echo "<li class='user_logado'>User logado: $email_user</li>";
+                                }
+                            }
                     ?>
                     <a href="index.php"><li>Home</li></a>
                     <a href="menu/sobre.php"><li>Sobre</li></a>
                     <a href="menu/agenda.php"><li>Agenda</li></a>
                     <li class="login">
                     <?php
-                    if ($_SESSION["admin"] == "logado") { 
+                    if ($_SESSION["admin"] == "logado" || $_SESSION['adminMaster'] == "logado") { 
                         echo"
                         <button id='btn_deslogar' name='btn_deslogar' class='bn632-hover bn18'>Deslogar</button>       
                         <script>
