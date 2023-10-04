@@ -296,22 +296,30 @@ if (isset($_SESSION["admin"])){
                     <img src="./assets/msg.svg" alt="" srcset="">
                 </div>
                 <div class="form-msg">
-                    <h1>Fale Conosco</h1>
-                    <form action="tops/envio.php" method="POST" class="formulario">
-                        <input type="hidden" name="_autoresponse" value="VEM PRA CÁ BAITOLA">
-                        <input type="hidden" name="_next" value="http://localhost/ouvidoria_maranguap-main/"><!--SERVE PRA REDIRECIONAR O USUÁRIO PARA OUTRA PÁGINA-->
-                        <input type="hidden" name="_template" value="table">
-                        <div class="box">
-                            <input type="text" name="nome" placeholder="Nome *">
-                        </div>
-                        <div class="box">
-                            <input type="email" name="email" placeholder="E-mail *">
-                        </div>
+                <h1>Fale Conosco</h1>
+                <form action="modal/msg.php" method="POST" class="formulario">
+                    <input type="hidden" name="_autoresponse" value="VEM PRA CÁ BAITOLA">
+                    <input type="hidden" name="_next" value="http://localhost/ouvidoria_maranguap-main/"><!--SERVE PRA REDIRECIONAR O USUÁRIO PARA OUTRA PÁGINA-->
+                    <input type="hidden" name="_template" value="table">
+                    <div class="box">
+                        <input type="text" name="nome" minlength="3" maxlength="100" placeholder="Nome *">
+                    </div>
+                    <div class="box">
+                        <input type="email" name="email" minlength="10" maxlength="100" placeholder="E-mail *">
+                    </div>
 
-                        <textarea class="form-control" id="" cols="30" rows="10" name="message" placeholder="Texto aqui!!!"></textarea>
+                    <textarea class="form-control" id="" cols="30" rows="10" name="descricao" placeholder="Texto aqui!!! *"></textarea>
+                    <?php
 
-                        <button type="submit" class="bn632-hover bn18 btn-footer">Enviar</button>
-                    </form>
+                    
+                    if(isset($_SESSION['error'])){
+                        echo '<p style="color:red; font-size:14px;">Erro ao enviar mensagem</p>';
+                        unset($_SESSION['error']);
+                    }
+                    
+                 ?>
+                    <button type="submit" name="btn" class="bn632-hover bn18 btn-footer">Enviar</button>
+                </form>
                 </div>
             </div>
 
