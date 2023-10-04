@@ -48,6 +48,7 @@ if (isset($_SESSION["admin"])) {
         <?php
             if ($_SESSION["admin"] == "logado") {
                 echo "<div class='cad_admin'><a href='../../modal/cad_admin.php'><img src='../../assets/icons/admin.png' alt='logo-mpe'></a></div>";
+                echo "<script>document.getElementsByClassName('logo')[0].style.marginLeft = '20px'; </script>";
             }
         ?>
 
@@ -176,7 +177,7 @@ if (isset($_SESSION["admin"])) {
     </footer>
 
 <?php 
-if ($_SESSION["admin"] == "logado"){
+if ($_SESSION["admin"] == "logado" || $_SESSION["adminMaster"] == "logado"){
     include("calendario_admin.php");
 }else {
     include("calendario_user.php");
