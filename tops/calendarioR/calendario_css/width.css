@@ -10,7 +10,7 @@
 
 .content { height: 100% !important; } .fc-col-header, .fc-timegrid-body { width: 100% !important; height: 100% !important; } .fc-scrollgrid-sync-table { width: 100% !important; height: 100% !important; } .fc-daygrid-body { width: 100% !important; height: 100% !important; } .fc-daygrid-body-balanced { width: 100% !important; height: 100% !important; }
 
-#calendar-container {width: 1300px; margin-top: 2rem; margin-bottom: 6rem;}
+#calendar-container {width: auto; margin-top: 2rem; margin-bottom: 6rem;}
 div.fc-dayGridMonth-view.fc-view.fc-daygrid {margin-top: -2rem;}
 
 #eventdescription{
@@ -19,7 +19,8 @@ div.fc-dayGridMonth-view.fc-view.fc-daygrid {margin-top: -2rem;}
 }
 
 #calendar-container{
-    margin-left: 7%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
 }
 
 #conteudo {
