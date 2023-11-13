@@ -2,13 +2,14 @@
 
 include "conn.php";
 
-
+session_start();
+$topID = $_SESSION["top"];
 if(isset($_GET['tableReference'])){
     $cont = 1;
     if($_GET['tableReference'] == 1){
         $data = array();
 
-        foreach($db->query("SELECT * FROM perfil_territorial") as $key){
+        foreach($db->query("SELECT * FROM perfil_territorial where topID = $topID") as $key){
             extract($key);
     
             array_push($data,["$instituicao","$localidade","$natureza","$zona","$endereco","$id_perfil"]);
@@ -44,7 +45,7 @@ if(isset($_GET['tableReference'])){
     }elseif($_GET['tableReference'] == 0){
         $data = array();
 
-        foreach($db->query("SELECT * FROM agenda_territorial") as $key){
+        foreach($db->query("SELECT * FROM agenda_territorial where topID = $topID") as $key){
             extract($key);
     
             array_push($data,["$compromisso","$eixo","$responsavel","$observacao","$situacao","$id_agenda"]);
