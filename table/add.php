@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+$top = $_SESSION["top"] ;
+
 
 include "conn.php";
 
@@ -13,7 +17,7 @@ if(isset($_POST['natureza'])){
             $query = $query.',';
         }
     }
-    $query = $query.",1);";
+    $query = $query.",$top);";
 
     $db->query($query);
     echo $query;
@@ -28,7 +32,7 @@ if(isset($_POST['natureza'])){
             $query = $query.',';
         }
     }
-    $query = $query.",1);";
+    $query = $query.",$top);";
 
     $db->query($query);
     echo $query;

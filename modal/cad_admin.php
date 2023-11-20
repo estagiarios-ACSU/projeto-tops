@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+$_SESSION['top'] = 1;
 if (isset($_SESSION["adminMaster"])) {
     if ($_SESSION["adminMaster"] == "logado"){
         $_SESSION["adminMaster"] = "logado";
@@ -24,6 +25,8 @@ if (isset($_SESSION["adminMaster"])) {
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tops.css">
+    <link rel="stylesheet" href="../css/modal-style.css">
 
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -34,7 +37,6 @@ if (isset($_SESSION["adminMaster"])) {
         <div class="logo">
             <img src="../assets/logopmm.png" alt="logo-mpe">
         </div>
-
 
         <div class="hamburger-menu">
             <input type="checkbox" name="" id="menu__toogle">
@@ -61,8 +63,8 @@ if (isset($_SESSION["adminMaster"])) {
                             if (isset($_SESSION["email"])){
                             include "Conn.php";
                         
-                            $conn = new Conn("top");
-                            $conexao = $conn->connectDb("top");
+                            $conn = new Conn("projeto_top");
+                            $conexao = $conn->connectDb("projeto_top");
 
                             $session_email = $_SESSION['email'];
                             $query = "SELECT email FROM usuario WHERE email = '$session_email'";
@@ -121,6 +123,31 @@ if (isset($_SESSION["adminMaster"])) {
     </header>
 
     <div class="line"></div>
+
+    <div class='admin-table' style='display:none'>
+    <?php
+        include "../table/index-agenda.php";
+    ?>
+    </div>
+
+
+    <div class='admin-table' style='display:none'>
+    <?php
+        include "../table/index-territorial.php";
+    ?>
+    </div>
+
+    
+    <div class='admin-table' style='display:block'>
+    <?php
+        include "../table/index-admin.php";
+    ?>
+
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
 
 
     <footer>

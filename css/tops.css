@@ -561,6 +561,7 @@ footer{
 
 table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 table {
@@ -577,11 +578,40 @@ table {
     border-spacing: 2px;
     font-variant: normal;
     text-transform: capitalize;
+    text-align: left;
+    font-size: 11pt;
+    table-layout: fixed;
 }
 
 th, td {
     border: 1px solid rgba(155, 155, 155, 0.15);
     padding: 5px;
+    white-space: pre-line;
+}
+
+.first-th{
+    border: none;
+    border-top-left-radius: 20px;
+}
+
+th{
+    background-image:linear-gradient(to top,#1b61e2, #2874fc);
+}
+
+.last-th{
+    border: none;
+    border-top-right-radius: 20px;
+}
+td{
+    word-wrap:break-word;
+ }
+
+tbody tr:nth-of-type(odd) {
+    background-color:#ffffff;
+}
+
+tbody{
+    background-color: #dde3ff;
 }
 
 thead {
@@ -615,7 +645,6 @@ th {
     font-weight: bold;
     text-align: -internal-center;
 }
-
 /*===AQUI COMEÇA A RESPONSIVIDADE DO SITE===*/
 
 @media (max-width: 900px){

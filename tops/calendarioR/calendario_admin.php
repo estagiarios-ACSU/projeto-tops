@@ -136,11 +136,11 @@
                                         // Alert message 
                                         Swal.fire(response.message,'','success');
                                         
-                                        
+
                                         var url = location.href
                                         setTimeout(function() {
                                             window.location.href = url;
-                                        }, 3000);
+                                        }, 500);
                                     }else{
                                          // Alert message 
                                          Swal.fire(response.message,'','error'); 

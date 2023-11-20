@@ -31,7 +31,7 @@ class User extends Conn{
     
     public function adminMaster($table){
         //Seleciona todos os dados da tabela.
-        $query = "SELECT * FROM $table WHERE admin = 'ADMaster'";
+        $query = "SELECT * FROM $table WHERE admin = 'Admin'";
         $result = $this->connection->query($query);
 
         $admin = False;

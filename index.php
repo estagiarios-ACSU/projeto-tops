@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION["adminMaster"])){
-    if ($_SESSION["adminMaster"] == "Master"){
+    if ($_SESSION["adminMaster"] == "Admin"){
         $_SESSION["adminMaster"] = "logado";
     }
 } else{
@@ -11,11 +11,11 @@ if (isset($_SESSION["adminMaster"])){
 }   
     
 if (isset($_SESSION["admin"])){
-    if ($_SESSION["admin"] == "admin"){
+    if ($_SESSION["admin"] == "Gerente"){
         // echo"<script>console.log('logado')</script>";
         $_SESSION["admin"] = "logado";
     }
-}else{
+} else{
     $_SESSION["admin"] = "deslogado";
 }
 
@@ -88,8 +88,8 @@ if (isset($_SESSION["admin"])){
                                 if (isset($_SESSION["email"])){
                                     include "modal/Conn.php";
                                 
-                                    $conn = new Conn("top");
-                                    $conexao = $conn->connectDb("top");
+                                    $conn = new Conn("projeto_top");
+                                    $conexao = $conn->connectDb("projeto_top");
 
                                     $session_email = $_SESSION['email'];
                                     $query = "SELECT email FROM usuario WHERE email = '$session_email'";
@@ -110,8 +110,8 @@ if (isset($_SESSION["admin"])){
                             if (isset($_SESSION["email"])){
                                     include "modal/Conn.php";
                                 
-                                    $conn = new Conn("top");
-                                    $conexao = $conn->connectDb("top");
+                                    $conn = new Conn("projeto_top");
+                                    $conexao = $conn->connectDb("projeto_top");
 
                                     $session_email = $_SESSION['email'];
                                     $query = "SELECT email FROM usuario WHERE email = '$session_email'";

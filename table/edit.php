@@ -28,6 +28,7 @@ if(isset($_POST['instituicao'])){
     $query = "UPDATE agenda_territorial set ";
     foreach($rowData as $key){
         $index = array_search($key,$rowData);
+        // echo $index;
         $columName = $columNames[$index];
         $query = $query."$columName = '$key'";
 
@@ -38,7 +39,7 @@ if(isset($_POST['instituicao'])){
     }
     $query = $query." where id_agenda = '$id_agenda';";
 
-    $db->query($query);
+    $db->query  ($query);
     echo $query;
 }elseif(isset($_POST['usuario'])){
     $rowData = [$_POST["email"],$_POST["senha"],$_POST["admin"],$_POST["usuario"]];

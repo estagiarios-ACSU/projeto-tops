@@ -1,4 +1,5 @@
-    <div class="search" style="display:flex;margin-top:20px;">
+ 
+   <div class="search" style="display:flex;margin-top:20px;">
         <button id="btn-add">Adicionar Linha</button>
         <input style="margin-left:50%;height:30px;margin-top:4%;" class="search" type="text" id="searchInput" placeholder="Pesquisar...">
     </div>
