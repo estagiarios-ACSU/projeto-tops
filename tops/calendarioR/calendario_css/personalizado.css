@@ -1,0 +1,345 @@
+/* head */
+.fc-toolbar { text-transform: capitalize;}
+.fc-col-header-cell-cushion { text-transform: capitalize; color: white; }
+.fc-toolbar-title{color: rgb(8, 2, 2);}
+div.fc-header-toolbar.fc-toolbar{
+    margin-top: -20px;
+    /* border-top: 1px solid #000; */
+    font-size: x-large;
+}   
+
+div.fc-event-title-container {
+    cursor: pointer;
+}
+
+div.fc-toolbar-chunk{
+    margin-bottom: 10px;
+}
+
+h2#fc-dom-1.fc-toolbar-title{
+    margin-top: 25px;
+}
+
+/* cor do header */
+th.fc-col-header-cell.fc-day.fc-day-sun{background-color: blue; height: 20px;}
+th.fc-col-header-cell.fc-day.fc-day-mon{background-color: blue;}
+th.fc-col-header-cell.fc-day.fc-day-tue{background-color: blue;}
+th.fc-col-header-cell.fc-day.fc-day-wed{background-color: blue;}
+th.fc-col-header-cell.fc-day.fc-day-thu{background-color: blue;}
+th.fc-col-header-cell.fc-day.fc-day-fri{background-color: blue;}
+th.fc-col-header-cell.fc-day.fc-day-sat{background-color: blue;}
+
+
+/* Começa a estilização dos butõens */
+button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+/* butonn today */
+button.fc-button.fc-button-primary{
+    width: 6.5rem;
+    background-color: #2874fc;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    height: 3.4rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+    /* margin-left: -40px;  */
+    /* background-image: linear-gradient(
+        to left,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+    );   */
+}
+
+
+
+/* butonn next > */
+button.fc-next-button.fc-button.fc-button-primary{
+    width: 4.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    height: 3.4rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+
+    background-image: linear-gradient(
+        to right,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+    );
+}
+
+
+/* butonn prev < */
+button.fc-prev-button.fc-button.fc-button-primary{
+    width: 4.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    height: 3.4rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+
+    background-image: linear-gradient(
+        to right,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+    );
+}
+/* button.fc-prev-button.fc-button.fc-button-primary:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+} */
+
+
+button.fc-myCustomButton-button.fc-button.fc-button-primary {
+    width: 6.5rem;
+    background-color: #2874fc;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    height: 3.4rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+    /* margin-left: -40px;  */
+
+    background-image: linear-gradient(
+        to right,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+    );
+}
+/* button.fc-myCustomButton-button.fc-button.fc-button-primary:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+} */
+
+
+/* button confirm, delete and cancel */
+button.swal2-confirm.swal2-styled{
+    width: 6.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    /* margin-top: 1.25rem; */
+    height: 3.5rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+
+    background-image: linear-gradient(
+        to right,
+        #2874fc,
+        #5496ec,
+        #1b61e2,
+        #502bb6
+    );
+}
+/* button.swal2-confirm.swal2-styled:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+} */
+
+
+button.swal2-cancel.swal2-styled{
+    width: 6.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #6e7881;
+    color: #fff;
+    cursor: pointer;
+    /* margin-top: 1.25rem; */
+    height: 3.5rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+}
+
+button.swal2-deny.swal2-styled {
+    width: 6.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #dc3741;
+    color: #fff;
+    cursor: pointer;
+    /* margin-top: 1.25rem; */
+    height: 3.5rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+}
+
+
+/* Butão de selecionar a cores */
+#value1{
+    color:#000000;
+}
+
+#value2{
+    color:#0500ff;
+}
+#value3{
+    color:#ff0000;
+}
+#value4{
+    color:#964b00;
+}
+#value5{
+    color:#ffff00;
+}
+#value6{
+    color:#993399;
+}
+#value7{
+    color:#ffa500;
+}
+#value8{
+    color:#059d15;
+}
+
+/* select color */
+select {
+    width: 230px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+  
+select option {
+    padding: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+  
+select option:checked {
+    background-color: #007bff;
+    color: #fff;
+}
+  
+select::-ms-expand {
+    display: none;
+}  
+
+
+/* Flex do conteudo */
+/* #conteudo { */
+    /* margin-left: 50%; */
+    /* display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: auto;
+}  */
+
+/* Texto turorial */
+/* #tutorial { 
+    margin-left: 60px;
+} */
+
+/* Label das datas */
+#start_evento{
+    /* margin-bottom: 2rem; */
+    /* color: red; */
+    margin-right: 47%;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: -1rem;
+    display: flex;
+    justify-content: space-around; 
+}
+
+#end_evento{
+    /* margin-bottom: 2rem; */
+    /* color: red; */
+    margin-right: 50%;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: -1rem;
+    display: flex;
+    justify-content: space-around; 
+}
