@@ -227,9 +227,19 @@ if (isset($_SESSION["adminMaster"])){
                         </div>
                     </div>
                     <div>
-                        <?php
-                            include "../table/index-agenda.php";
-                        ?>
+
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-agenda.php";
+                                }else{
+                                    include "../table/index-agenda-user.php";
+                                }
+                                
+                            }
+                            
+                            ?>
                     </div>
                 </section>
                 <!--====Perfil do Território====-->
@@ -245,13 +255,21 @@ if (isset($_SESSION["adminMaster"])){
 
                     <div class="content-equipments">
                     <div>
-                            <?php
-                            include "../table/index-territorial.php";
-                            ?>
-
-                            <script src="script.js"></script>
-                            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                         
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-territorial.php";
+                                    echo '<script src="script.js"></script>';
+                                }else{
+                                    include "../table/index-territorial-user.php";
+                                    echo "<script src='../table/script.js'></script>";
+                                }
+                                
+                            }
+                            
+                    ?>
                         </div>
                     </div>
                 </section>

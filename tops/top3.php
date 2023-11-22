@@ -22,6 +22,7 @@ if (isset($_SESSION["adminMaster"])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
+
     <!--====SCROLL===-->
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -39,7 +40,9 @@ if (isset($_SESSION["adminMaster"])){
      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
      crossorigin=""></script>
 
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Sweetalert -->
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+
 
 </head>
 
@@ -223,14 +226,21 @@ if (isset($_SESSION["adminMaster"])){
                             <h1 title="Territorios Produtivos">Agenda Territorial</h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-                        <div class="btn-exit">
-                            <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
                     </div>
                     <div>
-                        <?php
-                            include "../table/index-agenda.php";
-                        ?>
+
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-agenda.php";
+                                }else{
+                                    include "../table/index-agenda-user.php";
+                                }
+                                
+                            }
+                            
+                            ?>
                     </div>
                 </section>
                 <!--====Perfil do Território====-->
@@ -240,20 +250,27 @@ if (isset($_SESSION["adminMaster"])){
                             <h1 title="Territorios Produtivos">PERFIL DO TERRITÓRIO</h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-                        <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+
+
                     </div>
 
                     <div class="content-equipments">
-                        <div>
-                            <?php
-                            include "../table/index-territorial.php";
-                            ?>
-
-                            <script src="script.js"></script>
-                            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                    <div>
+                         
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-territorial.php";
+                                    echo '<script src="script.js"></script>';
+                                }else{
+                                    include "../table/index-territorial-user.php";
+                                    echo "<script src='../table/script.js'></script>";
+                                }
+                                
+                            }
+                            
+                    ?>
                         </div>
                     </div>
                 </section>

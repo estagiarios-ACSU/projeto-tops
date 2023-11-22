@@ -1,25 +1,14 @@
 <?php
 session_start();
 
-$_SESSION["top"] = 6;
-
-if (isset($_SESSION["adminMaster"])){
-    if ($_SESSION["adminMaster"] == "Admin"){
-        $_SESSION["adminMaster"] = "logado";
-    }
-} else{
-    // echo"<script>console.log('nao logado')</script>";
-    $_SESSION["adminMaster"] = "deslogado";
-}   
-
+$_SESSION["top"] = 1;
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
@@ -30,7 +19,6 @@ if (isset($_SESSION["adminMaster"])){
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
-    <link rel="stylesheet" href="../css/modal-style.css">
     <title>Document</title>
 
     <!--====MAP====-->
@@ -43,7 +31,6 @@ if (isset($_SESSION["adminMaster"])){
 
     <!-- Sweetalert -->
     <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
-
 
 </head>
 
@@ -72,7 +59,7 @@ if (isset($_SESSION["adminMaster"])){
                         class="menu__item">Home</a></li>
                 <li class="icons"><img src="./assets/icons/info-circle.svg" class="icon__menu" alt=""><a href="../menu/sobre.php"
                         class="menu__item">Sobre</a></li>
-                <li class="icons"><img src="./assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="../menu/agenda.php"
+                <li class="icons"><img src="./assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="../menu/sobre.php"
                         class="menu__item">Agenda</a></li>
                 <li class="icons"><img src="./assets/icons/telephone.svg" class="icon__menu" alt=""><a href="#contato"
                         class="menu__item">Contato</a></li>
@@ -86,8 +73,8 @@ if (isset($_SESSION["adminMaster"])){
                             if (isset($_SESSION["email"])){
                             include "../modal/Conn.php";
                         
-                            $conn = new Conn("projeto_top");
-                            $conexao = $conn->connectDb("projeto_top");
+                            $conn = new Conn("top");
+                            $conexao = $conn->connectDb("top");
 
                             $session_email = $_SESSION['email'];
                             $query = "SELECT email FROM usuario WHERE email = '$session_email'";
@@ -104,12 +91,13 @@ if (isset($_SESSION["adminMaster"])){
 
                             echo "<li class='user_logado'>User logado: $email_user</li>";
                         }
+
                     } else if ($_SESSION["adminMaster"] == "logado"){
                         if (isset($_SESSION["email"])){
                                 include "../modal/Conn.php";
                             
-                                $conn = new Conn("projeto_top");
-                                $conexao = $conn->connectDb("projeto_top");
+                                $conn = new Conn("top");
+                                $conexao = $conn->connectDb("top");
 
                                 $session_email = $_SESSION['email'];
                                 $query = "SELECT email FROM usuario WHERE email = '$session_email'";
@@ -163,7 +151,6 @@ if (isset($_SESSION["adminMaster"])){
                 ?>
                 </li>
             </ul>
-        </nav>
     </header>
 
     <!--====MAIN====-->
@@ -182,7 +169,7 @@ if (isset($_SESSION["adminMaster"])){
                     <li class="menu-items" onclick="colegiados()">
                         <a>Grupos Colegiados</a></li>
                     <li class="menu-items" onclick="calendario()">
-                        <a href="calendarioR/index.php">Calendário TOP-6</a></li>
+                        <a href="calendarioR/index.php">Calendário TOP-1</a></li>
                     <li class="menu-items" onclick="download()">
                         <a>Arquivos Para Download</a></li>
                     <li class="menu-items" onclick="media()">
@@ -195,7 +182,7 @@ if (isset($_SESSION["adminMaster"])){
                     <div class="content-top">
                       <div>
                           <h1 title="Territorios Produtivos">Geral</h1>
-                          <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
+                          <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                       </div>
                       <div class="btn-exit">
                         <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
@@ -204,7 +191,7 @@ if (isset($_SESSION["adminMaster"])){
                     <div class="content-half">
                         <div class="cont-half">
                             <span class="top-topic">Unidade Territorial</span>
-                            <span class="top-subtopic">Top-6</span>
+                            <span class="top-subtopic">Top-1</span>
                         </div>
                         <div class="cont-half">
                             <span class="top-topic">Responsavel</span>
@@ -222,27 +209,15 @@ if (isset($_SESSION["adminMaster"])){
                 </section>
                 <!--====Agenda Territorial====-->
                 <section class="agenda">
-                    <div class="content-top" style='display:block'>
+                    <div class="content-top">
                         <div>
                             <h1 title="Territorios Produtivos">Agenda Territorial</h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-                    </div>
-                    <div>
-
-                    <?php
-                           if(isset($_SESSION['adminMaster'])){
-                              
-                               if($_SESSION['adminMaster'] == 'logado'){
-                                    include "../table/index-agenda.php";
-                                }else{
-                                    include "../table/index-agenda-user.php";
-                                }
-                                
-                            }
-                            
-                            ?>
-                    </div>
+                        <div class="btn-exit">
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        </div>
+                      </div>
                 </section>
                 <!--====Perfil do Território====-->
                 <section class="perfil">
@@ -251,27 +226,90 @@ if (isset($_SESSION["adminMaster"])){
                             <h1 title="Territorios Produtivos">PERFIL DO TERRITÓRIO</h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-
-
+                        <div class="btn-exit">
+                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
+                        </div>
                     </div>
 
                     <div class="content-equipments">
-                    <div>
-                         
-                    <?php
-                           if(isset($_SESSION['adminMaster'])){
-                              
-                               if($_SESSION['adminMaster'] == 'logado'){
-                                    include "../table/index-territorial.php";
-                                    echo '<script src="script.js"></script>';
-                                }else{
-                                    include "../table/index-territorial-user.php";
-                                    echo "<script src='../table/script.js'></script>";
-                                }
-                                
-                            }
-                            
-                    ?>
+                        <div>
+                            <p>1. Equipamentos Publicos Educação</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th >Escolas</th>
+                                        <th>Localidade</th>
+                                        <th>Natureza</th>
+                                        <th>Zona</th>
+                                        <th>Endereço</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="30%">Sen Carlos Jereissati Caic</td>
+                                        <td>Area Verde</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Rua Antonio Teixeira, SN</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Chico Lima Emeief</td>
+                                        <td>Area Verde</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Av Senador Almir Pinto, 4005</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Wilson Bastos Rodrigues Cei</td>
+                                        <td>Area Verde</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%"><p>Rua Raimundo Pinto, 799</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Colegio Espaco Livre</td>
+                                        <td>Area Verde</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Rua Macario Pontes, 120</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Escolinha Primeiros Passos</td>
+                                        <td>Area Verde</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Irma Irene, 60</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Colegio Olimpico</td>
+                                        <td>Area Verde</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Rua Joaninha Vieira, 176</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Paulo Sarasate Emeief</td>
+                                        <td>Outra Banda</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Av Dr Argeu G Braga Herbster, 883</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Jose Mario Mota Barbosa Cei Dep</td>
+                                        <td>Outra Banda</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Rua Da Praça, Sn</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Renato Mota Emeief</td>
+                                        <td>Outra banda</td>
+                                        <td>Pública</td>
+                                        <td>Urbano</td>
+                                        <td width="20%">Rua Emanuel Abreu Costa, 103</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </section>
@@ -281,7 +319,7 @@ if (isset($_SESSION["adminMaster"])){
                     <div class="content-top">
                         <div>
                             <h1 title="Territorios Produtivos">Grupos Colegiados</h1>
-                            <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
+                            <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
                           <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
@@ -293,13 +331,21 @@ if (isset($_SESSION["adminMaster"])){
                 <section class="calendario">
                     <div class="content-top">
                         <div>
-                            <h1 title="Territorios Produtivos">Calendário Top-6</h1>
-                            <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
+                            <h1 title="Territorios Produtivos">Calendário Top-1</h1>
+                            <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
                           <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
                         </div>
-                      </div>
+                    </div>
+                
+                    <?php 
+                        $currentData = date('Y-m-d');
+                    ?>
+                    
+                    <div id='calendar-container'>
+                        <div id='calendar'></div>
+                    </div>
                 </section>
 
                 <!--Download-->
@@ -308,7 +354,7 @@ if (isset($_SESSION["adminMaster"])){
                         <div>
                             <h1 title="Territorios Produtivos">Arquivos Para Download
                             </h1>
-                            <p></p>
+                            <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
                           <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
@@ -322,7 +368,7 @@ if (isset($_SESSION["adminMaster"])){
                         <div>
                             <h1 title="Territorios Produtivos">Media
                             </h1>
-                            <p>Papara, Jubaia, Umarizeiras, Boa Vista, Cachoeira, Boa Vista dos Vieiras, Lages, Vila Nova, Papoco, Riacho Grande</p>
+                            <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
                         <div class="btn-exit">
                           <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
@@ -344,7 +390,7 @@ if (isset($_SESSION["adminMaster"])){
                 <p></p>
             </div>
             <div class="content-footer-right">
-                <a name="contato"></a>
+                <a name="contato"></a>                    
                 <h1>ACOMPANHE</h1>
                 <div class="social-media">
                     <a href="https://www.instagram.com/prefeituramaranguape/"><img src="../assets/icons/icons8-instagram.svg" alt=""></a>
@@ -354,7 +400,7 @@ if (isset($_SESSION["adminMaster"])){
             </div>
         </div>
 
-        <div class="copy">Copyright &copy 2023
+        <div class="copy">Copyright &copy 2022
             Prefeitura Municipal
             de Maranguape.</div>
     </footer>
@@ -371,39 +417,23 @@ if (isset($_SESSION["adminMaster"])){
 
     <script src="../tops/top.js"></script>
     <script>
-        var map = L.map('map').setView([-4.025915706046017, -38.74238728197363], 12.3);
+        var map = L.map('map').setView([-3.8878235, -38.6808622], 14.3);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
-        var marker = L.marker([-3.9855332371778265, -38.72599066886621]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Papara").openPopup();
+
+        var marker = L.marker([-3.872452, -38.670670]).addTo(map)
+        marker.bindPopup("<b>Top-1</b><br>Área Verde").openPopup();
         ;
-        var marker = L.marker([-4.021850709882672, -38.74252057032876]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Papoco").openPopup();
+
+        var marker = L.marker([-3.880709, -38.677712]).addTo(map)
+        marker.bindPopup("<b>Top-1</b><br>Outra Banda").openPopup();
         ;
-        var marker = L.marker([-4.00820837265586, -38.72910500440234]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Umarizeiras").openPopup();
-        ;
-        var marker = L.marker([-4.069374192840426, -38.75914892145526]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Cachoeira").openPopup();
-        ;
-        var marker = L.marker([-4.048232089177406, -38.73633706385433]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Boa Vista").openPopup();
-        ;var marker = L.marker([-4.0213593254882225, -38.71643690069069]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Boa Vista dos Vieiras").openPopup();
-        ;var marker = L.marker([-4.0147354816622265, -38.71148153255471]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Lages").openPopup();
-        ;
-        ;var marker = L.marker([-3.9914674509012507, -38.719954810895594]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Vila Nova").openPopup();
-        ;
-        ;var marker = L.marker([-4.050031941765457, -38.715308666419546]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Jubaia").openPopup();
-        ;
-        ;var marker = L.marker([-4.047729092974702, -38.76180455258458]).addTo(map)
-        marker.bindPopup("<b>Top-6</b><br>Riacho Grande").openPopup();
-        ;
+
+        var marker = L.marker([-3.867488, -38.653801]).addTo(map)
+        marker.bindPopup("<b>Top-1</b><br>Pau Serrado").openPopup();
         ;
     </script>
+</script>
 </body>
 
 </html>
