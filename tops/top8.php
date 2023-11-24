@@ -11,8 +11,6 @@ if (isset($_SESSION["adminMaster"])){
     // echo"<script>console.log('nao logado')</script>";
     $_SESSION["adminMaster"] = "deslogado";
 }   
-
-
 if (isset($_SESSION["admin"])){
     if ($_SESSION["admin"] == "Gerente"){
         // echo"<script>console.log('logado')</script>";
@@ -21,7 +19,6 @@ if (isset($_SESSION["admin"])){
 } else{
     $_SESSION["admin"] = "deslogado";
 }
-
 ?>
 
 
@@ -29,18 +26,20 @@ if (isset($_SESSION["admin"])){
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
+
     <!--====SCROLL===-->
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
-    <title>Top8 Maranguape</title>
-    <link rel="shortcut icon" href="../assets/brasao.png" type="image/x-icon">  
+    <link rel="stylesheet" href="../css/modal-style.css">
+    <title>Document</title>
+
     <!--====MAP====-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
@@ -51,6 +50,7 @@ if (isset($_SESSION["admin"])){
 
     <!-- Sweetalert -->
     <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+
 </head>
 
 <body>
@@ -228,15 +228,27 @@ if (isset($_SESSION["admin"])){
                 </section>
                 <!--====Agenda Territorial====-->
                 <section class="agenda">
-                    <div class="content-top">
+                    <div class="content-top" style='display:block'>
                         <div>
                             <h1 title="Territorios Produtivos">Agenda Territorial</h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-                        <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
-                      </div>
+                    </div>
+                    <div>
+
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-agenda.php";
+                                }else{
+                                    include "../table/index-agenda-user.php";
+                                }
+                                
+                            }
+                            
+                            ?>
+                    </div>
                 </section>
                 <!--====Perfil do Território====-->
                 <section class="perfil">
@@ -245,90 +257,27 @@ if (isset($_SESSION["admin"])){
                             <h1 title="Territorios Produtivos">PERFIL DO TERRITÓRIO</h1>
                             <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-                        <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+
+
                     </div>
 
                     <div class="content-equipments">
-                        <div>
-                            <p>1. Equipamentos Publicos Educação</p>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Escolas</th>
-                                        <th>Localidade</th>
-                                        <th>Natureza</th>
-                                        <th>Zona</th>
-                                        <th>Endereço</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td width="30%">Antonio Freitas De Oliveira Emef</td>
-                                        <td>Rato De Baixo</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Florencio Barroso De Albuquerque Emeief</td>
-                                        <td>Rato De Baixo</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Jose Mamede Da Nobrega Emeief</td>
-                                        <td>Rato De Cima</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"><p></p></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Padre Bernard Rene Louis Coursol Cei</td>
-                                        <td>Rato De Baixo</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Antonio Ivan Marques Cei</td>
-                                        <td>Serra Do Lagedo</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Imaculada Conceicao Emeief</td>
-                                        <td>Serra Do Lagedo</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Jose De Sousa Albuquerque Emef</td>
-                                        <td>Lagoa Do Juvenal</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Nova Vida Cei</td>
-                                        <td>>Lagoa Do Juvenal</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Francisca Iracema Campos Araujo Cei</td>
-                                        <td>Itapebussu</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div>
+                         
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-territorial.php";
+                                    echo '<script src="script.js"></script>';
+                                }else{
+                                    include "../table/index-territorial-user.php";
+                                    echo "<script src='../table/script.js'></script>";
+                                }
+                                
+                            }
+                            
+                    ?>
                         </div>
                     </div>
                 </section>

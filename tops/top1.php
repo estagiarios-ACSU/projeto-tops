@@ -10,8 +10,7 @@ if (isset($_SESSION["adminMaster"])){
 } else{
     // echo"<script>console.log('nao logado')</script>";
     $_SESSION["adminMaster"] = "deslogado";
-}   
-
+}
 if (isset($_SESSION["admin"])){
     if ($_SESSION["admin"] == "Gerente"){
         // echo"<script>console.log('logado')</script>";
@@ -62,6 +61,7 @@ if (isset($_SESSION["admin"])){
         </div>
 
         <?php
+        
             if ($_SESSION["adminMaster"] == "logado") {
                 echo "<div class='cad_admin'><a href='../modal/cad_admin.php'><img src='../assets/icons/admin.png' alt='logo-mpe'></a></div>";
                 echo "<script>document.getElementsByClassName('logo')[0].style.marginLeft = '20px'; </script>";
@@ -236,9 +236,19 @@ if (isset($_SESSION["admin"])){
                         </div>
                     </div>
                     <div>
-                        <?php
-                            include "../table/index-agenda.php";
-                        ?>
+
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-agenda.php";
+                                }else{
+                                    include "../table/index-agenda-user.php";
+                                }
+                                
+                            }
+                            
+                            ?>
                     </div>
                 </section>
                 <!--====Perfil do Território====-->
@@ -254,13 +264,21 @@ if (isset($_SESSION["admin"])){
 
                     <div class="content-equipments">
                     <div>
-                            <?php
-                            include "../table/index-territorial.php";
-                            ?>
-
-                            <script src="script.js"></script>
-                            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                         
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-territorial.php";
+                                    echo '<script src="script.js"></script>';
+                                }else{
+                                    include "../table/index-territorial-user.php";
+                                    echo "<script src='../table/script.js'></script>";
+                                }
+                                
+                            }
+                            
+                    ?>
                         </div>
                     </div>
                 </section>

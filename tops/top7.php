@@ -10,9 +10,7 @@ if (isset($_SESSION["adminMaster"])){
 } else{
     // echo"<script>console.log('nao logado')</script>";
     $_SESSION["adminMaster"] = "deslogado";
-} 
-
-
+}   
 if (isset($_SESSION["admin"])){
     if ($_SESSION["admin"] == "Gerente"){
         // echo"<script>console.log('logado')</script>";
@@ -21,23 +19,24 @@ if (isset($_SESSION["admin"])){
 } else{
     $_SESSION["admin"] = "deslogado";
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
+
     <!--====SCROLL===-->
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--=== CSS ===-->
     <link rel="stylesheet" href="../css/tops.css">
+    <link rel="stylesheet" href="../css/modal-style.css">
     <title>Document</title>
 
     <!--====MAP====-->
@@ -48,9 +47,9 @@ if (isset($_SESSION["admin"])){
      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
      crossorigin=""></script>
 
-
     <!-- Sweetalert -->
     <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+
 
 </head>
 
@@ -229,107 +228,56 @@ if (isset($_SESSION["admin"])){
                 </section>
                 <!--====Agenda Territorial====-->
                 <section class="agenda">
-                    <div class="content-top">
+                    <div class="content-top" style='display:block'>
                         <div>
                             <h1 title="Territorios Produtivos">Agenda Territorial</h1>
-                            <p>Tanques, Cajueiro, Forquilha, Amanari, Retiro, São João do Amanari, Melão, Vassoura, Assentamento Salgado</p>
+                            <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-                        <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
-                      </div>
+                    </div>
+                    <div>
+
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-agenda.php";
+                                }else{
+                                    include "../table/index-agenda-user.php";
+                                }
+                                
+                            }
+                            
+                            ?>
+                    </div>
                 </section>
                 <!--====Perfil do Território====-->
                 <section class="perfil">
                     <div class="content-top">
                         <div>
                             <h1 title="Territorios Produtivos">PERFIL DO TERRITÓRIO</h1>
-                            <p></p>
+                            <p>Área Verde, Outra Banda, Parque das Rosas, São Benedito, Pau Serrado</p>
                         </div>
-                        <div class="btn-exit">
-                          <a href="../index.php"><button class="bn632-hover bn18">Voltar</button></a>
-                        </div>
+
+
                     </div>
 
                     <div class="content-equipments">
-                        <div>
-                            <p>1. Equipamentos Publicos Educação</p>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th >Escolas</th>
-                                        <th>Localidade</th>
-                                        <th>Natureza</th>
-                                        <th>Zona</th>
-                                        <th>Endereço</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td width="30%">Sen Carlos Jereissati Caic</td>
-                                        <td>Area Verde</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Rua Antonio Teixeira, SN</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Chico Lima Emeief</td>
-                                        <td>Area Verde</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Av Senador Almir Pinto, 4005</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Wilson Bastos Rodrigues Cei</td>
-                                        <td>Area Verde</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%"><p>Rua Raimundo Pinto, 799</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Colegio Espaco Livre</td>
-                                        <td>Area Verde</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Rua Macario Pontes, 120</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Escolinha Primeiros Passos</td>
-                                        <td>Area Verde</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Irma Irene, 60</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Colegio Olimpico</td>
-                                        <td>Area Verde</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Rua Joaninha Vieira, 176</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Paulo Sarasate Emeief</td>
-                                        <td>Outra Banda</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Av Dr Argeu G Braga Herbster, 883</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Jose Mario Mota Barbosa Cei Dep</td>
-                                        <td>Outra Banda</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Rua Da Praça, Sn</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%">Renato Mota Emeief</td>
-                                        <td>Outra banda</td>
-                                        <td>Pública</td>
-                                        <td>Urbano</td>
-                                        <td width="20%">Rua Emanuel Abreu Costa, 103</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div>
+                         
+                    <?php
+                           if(isset($_SESSION['adminMaster'])){
+                              
+                               if($_SESSION['adminMaster'] == 'logado'){
+                                    include "../table/index-territorial.php";
+                                    echo '<script src="script.js"></script>';
+                                }else{
+                                    include "../table/index-territorial-user.php";
+                                    echo "<script src='../table/script.js'></script>";
+                                }
+                                
+                            }
+                            
+                    ?>
                         </div>
                     </div>
                 </section>
