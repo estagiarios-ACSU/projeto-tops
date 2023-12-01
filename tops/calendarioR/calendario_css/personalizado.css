@@ -11,9 +11,6 @@ div.fc-header-toolbar.fc-toolbar{
 div.fc-event-title-container {
     cursor: pointer;
 }
-div.fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
-    cursor: pointer;
-}
 
 div.fc-toolbar-chunk{
     margin-bottom: 10px;
@@ -345,4 +342,124 @@ select::-ms-expand {
     margin-bottom: -1rem;
     display: flex;
     justify-content: space-around; 
+}
+
+@media (max-width: 770px){
+
+    div.fc-header-toolbar.fc-toolbar{
+        margin-top: -20px;
+        font-size: 16px;
+    }
+    
+    button.fc-button.fc-button-primary{
+        width: 25%;
+        font-size: 1rem;
+        height: 5%;
+        margin-top: 1.5rem;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-next-button.fc-button.fc-button-primary{
+        width: 8%;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        height: 5%;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-prev-button.fc-button.fc-button-primary{
+        width: 8%;
+        font-size: 1rem;
+        margin-top: 1.5rem; 
+        height: 5%;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-myCustomButton-button.fc-button.fc-button-primary {
+        width: 25%;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        height: 5%;
+        border-radius: 3.1rem;
+    }
+}
+
+@media (max-width: 500px){
+    div.fc-header-toolbar.fc-toolbar{
+        margin-top: -20px;
+        font-size: 12px;
+    }
+    
+    button.fc-button.fc-button-primary{
+        width: 25%;
+        font-size: 1rem;
+        height: 5%;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-next-button.fc-button.fc-button-primary{
+        width: 8%;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        height: 5%;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-prev-button.fc-button.fc-button-primary{
+        width: 8%;
+        font-size: 1rem;
+        margin-top: 1.5rem; 
+        height: 5%;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-myCustomButton-button.fc-button.fc-button-primary {
+        width: 25%;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        height: 5%;
+        border-radius: 3.1rem;
+    }
+}
+
+@media (max-width: 420px){
+    div.fc-header-toolbar.fc-toolbar{
+        margin-top: -20px;
+        font-size: 11px;
+    }
+    
+    button.fc-button.fc-button-primary{
+        width: 24%;
+        font-size: 0.8rem;
+        height: 4%;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-next-button.fc-button.fc-button-primary{
+        width: 7%;
+        font-size: 0.8rem;
+        margin-top: 1.5rem;
+        height: 4%;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-prev-button.fc-button.fc-button-primary{
+        width: 7%;
+        font-size: 0.8rem;
+        margin-top: 1.5rem; 
+        height: 4%;
+        border-radius: 3.1rem;
+    }
+
+    button.fc-myCustomButton-button.fc-button.fc-button-primary {
+        width: 24%;
+        font-size: 0.8rem;
+        margin-top: 1.5rem;
+        height: 4%;
+        border-radius: 3.1rem;
+    }
 }
