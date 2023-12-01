@@ -2,20 +2,20 @@
 session_start();
 
 if (isset($_SESSION["adminMaster"])){
-    if ($_SESSION["adminMaster"] == "Master"){
+    if ($_SESSION["adminMaster"] == "Admin"){
         $_SESSION["adminMaster"] = "logado";
     }
 } else{
     // echo"<script>console.log('nao logado')</script>";
     $_SESSION["adminMaster"] = "deslogado";
 }   
-
-if (isset($_SESSION["admin"])) {
-    if ($_SESSION["admin"] == "logado"){
+    
+if (isset($_SESSION["admin"])){
+    if ($_SESSION["admin"] == "Gerente"){
+        // echo"<script>console.log('logado')</script>";
         $_SESSION["admin"] = "logado";
-        echo"<script>console.log('logado')</script>";
     }
-}else {
+} else{
     $_SESSION["admin"] = "deslogado";
 }
 
@@ -41,7 +41,7 @@ if (isset($_SESSION["admin"])) {
     <!-- CSS -->
     <link rel="stylesheet" href="calendario_css/personalizado.css">
     <link rel="stylesheet" href="calendario_css/width.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cadadminp.css">
 
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -49,18 +49,16 @@ if (isset($_SESSION["admin"])) {
 <body>
     <!--==== HEADER ====-->
     <header class="nav-bar">
+    
         <div class="logo">
-            <img src="../../assets/logopmm.png" alt="logo-mpe">
-        </div>
-
-        
-        <?php
+        <img src="../../assets/logopmm.png" alt="logo-mpe">
+            <?php
             if ($_SESSION["adminMaster"] == "logado") {
-                echo "<div class='cad_admin' style='position:static;'><a href='../../modal/cad_admin.php'><img  style='margin-left: -585px; margin-top: 7px;' src='../../assets/icons/admin.png' alt='logo-mpe'></a></div>";
+                echo "<div class='cad_admin' style='position:static;'><a href='../../modal/cad_admin.php'><img   src='../../assets/icons/admin.png' alt='logo-mpe'></a></div>";
                 // echo "<script>document.getElementsByClassName('logo')[0].style.position = 'static'; </script>";
             }
         ?>
-
+        </div>
         <div class="hamburger-menu">
             <input type="checkbox" name="" id="menu__toogle">
             <label for="menu__toogle" class="menu__btn">
@@ -74,9 +72,36 @@ if (isset($_SESSION["admin"])) {
                         class="menu__item">Sobre</a></li>
                 <li class="icons"><img src="./assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="menu/agenda.php"
                         class="menu__item">Agenda</a></li>
-                <li class="icons"><img src="./assets/icons/telephone.svg" class="icon__menu" alt=""><a href="#contato"
-                        class="menu__item">Contato</a></li>
+                <li class="icons"><img  class="icon__menu" src="../../assets/icons/admin.png"><a href="../../modal/cad_admin.php"
+                        class="menu__item">Login</a></li>
             </ul>
+        <?php
+            if ($_SESSION["adminMaster"] == "logado") {
+            echo'<ul class="menu__box">
+                <li class="icons"><img src="../../assets/icons/house.svg" class="icon__menu" alt=""><a href="index.php"
+                        class="menu__item">Home</a></li>
+                <li class="icons"><img src="../../assets/icons/info-circle.svg" class="icon__menu" alt=""><a href="menu/sobre.php"
+                        class="menu__item">Sobre</a></li>
+                <li class="icons"><img src="../../assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="menu/agenda.php"
+                        class="menu__item">Agenda</a></li>
+                <li class="icons"><img  class="icon__menu" src="../../assets/icons/admin.png"><a href="../../modal/cad_admin.php"
+                        class="menu__item">Cadastrar Admin</a></li>
+                <li class="icons"><img  class="icon__menu" src="../../assets/icons/admin.png"><a href="../../modal/cad_admin.php"
+                        class="menu__item">Deslogar</a></li>
+            </ul>';
+            } else if ($_SESSION["admin"] == "logado") {
+            echo'<ul class="menu__box">
+                <li class="icons"><img src="../../assets/icons/house.svg" class="icon__menu" alt=""><a href="index.php"
+                        class="menu__item">Home</a></li>
+                <li class="icons"><img src="../../assets/icons/info-circle.svg" class="icon__menu" alt=""><a href="menu/sobre.php"
+                        class="menu__item">Sobre</a></li>
+                <li class="icons"><img src="../../assets/icons/calendar-date.svg" class="icon__menu" alt=""><a href="menu/agenda.php"
+                        class="menu__item">Agenda</a></li>
+                <li class="icons"><img  class="icon__menu" src="../../assets/icons/admin.png"><a href="../../modal/cad_admin.php"
+                        class="menu__item">Deslogar</a></li>
+            </ul>';
+            }
+        ?>
         </div>
 
         <nav class="menu">
@@ -201,9 +226,7 @@ if (isset($_SESSION["admin"])) {
             </div>
         </div>
 
-        <div class="copy">Copyright &copy 2023
-            Prefeitura Municipal
-            de Maranguape.</div>
+        <div class="copy"><p>Copyright &copy 2023 Prefeitura Municipal de Maranguape.</p></div>
     </footer>
 
 <?php 
