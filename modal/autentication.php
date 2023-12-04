@@ -24,10 +24,8 @@ if(isset($_POST['btn'])){
         header("location:../index.php");
     }
     else{
-        session_destroy(); 
-        // header("location:../index.php");
-        echo"<script>Alert(2)</script>";
-        echo "vc n esta logado";
+        $_SESSION['loginError'] = true;
+        header("location:../tops/login.php");
     }
 }
 ?>
