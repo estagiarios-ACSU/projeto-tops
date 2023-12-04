@@ -238,7 +238,7 @@ if (isset($_SESSION["admin"])){
                     <div>
 
                     <?php
-                           if(isset($_SESSION['adminMaster'])){
+                           if(isset($_SESSION['adminMaster']) || isset($_SESSION['admin'])){
                               
                                if($_SESSION['adminMaster'] == 'logado'){
                                     include "../table/index-agenda.php";
@@ -266,7 +266,7 @@ if (isset($_SESSION["admin"])){
                     <div>
                          
                     <?php
-                           if(isset($_SESSION['adminMaster'])){
+                           if(isset($_SESSION['adminMaster']) || isset($_SESSION['admin'])){
                               
                                if($_SESSION['adminMaster'] == 'logado'){
                                     include "../table/index-territorial.php";
