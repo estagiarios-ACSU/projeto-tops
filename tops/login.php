@@ -28,10 +28,25 @@ session_start();
                         <div class="underline"></div>
                     </div>
                     <div class="input-field">
-                        <input type="password" name="password" id="password" placeholder="Digite sua Senha">
+                        <div class="icon-password">
+                            <input type="password" name="password" id="password" placeholder="Digite sua Senha">
+                            <i class="far fa-eye" id="togglePassword"></i>
+                        </div> 
+                        <script>
+                            // senha eye 
+                            const togglePassword = document.querySelector('#togglePassword');
+                            const password = document.querySelector('#password');
+
+                            togglePassword.addEventListener('click', function (e) {
+                                // toggle the type attribute
+                                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                password.setAttribute('type', type);
+                                // toggle the eye slash icon
+                                this.classList.toggle('fa-eye-slash');
+                            });
+                        </script>
                         <div class="underline"></div>
                     </div>
-
                     <input name="btn" type="submit" value="Entrar">
                 </form>
 
