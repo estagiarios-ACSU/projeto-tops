@@ -170,6 +170,17 @@
         background-size: cover;
     }
 
+    .icon-password {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #togglePassword {
+        margin-left: -23px;
+        margin-top: 5px;
+    }
+
+
     @media screen and (width: 820px) and (orientation: portrait){
         .container-left .login-form{
             height: 40vh;
