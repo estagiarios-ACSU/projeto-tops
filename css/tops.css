@@ -461,6 +461,50 @@ button.swal2-cancel.swal2-styled:hover {
     flex-direction: column;
 }
 
+/* butão editar o top */
+.content-half .bn632-hover {
+    width: 5.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    height: 3rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.125rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+  }
+
+.content-half .bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+.content-half .bn632-hover:focus {
+    outline: none;
+  }
+  
+.content-half .bn632-hover.bn18 {
+    background-image: linear-gradient(
+      to right,
+      #2874fc,
+      #5496ec,
+      #1b61e2,
+      #502bb6
+    );
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  }
+/* end editar button */
+
 .top-topic {
     font-size: 1.3rem;
 }
@@ -646,6 +690,101 @@ th {
     text-align: -internal-center;
 }
 /*===AQUI COMEÇA A RESPONSIVIDADE DO SITE===*/
+
+
+/* CSS do swal do modal */
+
+.form-edit {
+    margin-top: 2%;
+}
+
+.form-edit span {
+    font-size: 23px;
+}
+
+.form-edit .input-submit {
+    align-items: center;
+    margin-top: 1.3%;
+    font-weight: 500;
+}
+
+.form-edit input {
+    margin-bottom: 2%;
+    width: 70%;
+    height: 2rem;
+    font-size: 16px;
+}
+
+.form-edit .top-topic {
+    margin-bottom: 1.3%;
+}
+
+/* butões que estão no swal do top */
+.form-edit .bn632-hover {
+    width: 5.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 7rem;
+    height: 3.5rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.125rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+  }
+
+.form-edit .bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+.form-edit .bn632-hover:focus {
+    outline: none;
+}
+  
+.form-edit .bn632-hover.bn18 {
+    background-image: linear-gradient(
+      to right,
+      #2874fc,
+      #5496ec,
+      #1b61e2,
+      #502bb6
+    );
+}
+
+button.swal2-cancel.swal2-styled{
+    width: 5.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #6e7881;
+    color: #fff;
+    cursor: pointer;
+    margin-top: -7.45rem;
+    margin-left: 7rem; 
+    height: 3.5rem;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 3.1rem;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-weight: 300;
+}
+/* end buttons */
+
+/* CSS do swal dos top da parte geral acaba aqui */
 
 @media (max-width: 900px){
     .row{
