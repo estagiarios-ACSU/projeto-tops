@@ -86,7 +86,7 @@ if(isset($_GET['tableReference'])){
         foreach($db->query("SELECT * FROM usuario") as $key){
             extract($key);
     
-            array_push($data,["$nomeUsuario","$email","$senha","$admin","Prefeite","$id"]);
+            array_push($data,["$nomeUsuario","$email","$senha","$admin",$funcao,"$id"]);
         }
 
         if(isset($_GET['indexSelectOption'])){

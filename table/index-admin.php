@@ -52,15 +52,16 @@
                             <div class="input-field">
                                 <input type="text" name="senha" class="adminInput" placeholder="Digite a senha">
                             </div>
+                            <div class="input-field">
+                                <input type="text" name="funcao" class="adminInput" placeholder="Digite a função ou cargo">
+                            </div>
                             <div class="input-field" style='margin-top:20px'>
                                 <select style="height:30px;" class="columns-infor-choice adminInput selectAdmin" name="admin">
                                 <option class='table-option-choice' value="Gerente">Gerente</option>
                                 <option class='table-option-choice' value="Admin">Admin</option>
                                 </select>
                             </div>
-                            <div class="input-field" style="display:none">
-                                <input type="text" name="funcao" class="adminInput" placeholder="Digite o Endereço">
-                            </div>
+
                             <div>
                                 <input name="btn" class="bottom-button saveBtn" type="submit" value="Adicionar" id="saveBtn">
                                 <button class="bottom-button closeBtn" id="closeModalBtn">Cancelar</button>

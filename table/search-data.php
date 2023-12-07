@@ -94,5 +94,46 @@ foreach ($filteredData as $row) {
 
     }
 }
+elseif($_GET['tableReference'] == 'usuario'){
+    $data = array();
+
+    foreach($db->query("SELECT * FROM usuario") as $key){
+        extract($key);
+
+        array_push($data,["$nomeUsuario","$email","$senha","$admin",$funcao,"$id"]);
+    }
+
+    if(isset($_GET['indexSelectOption'])){
+        $searchTerm = isset($_GET['search']) ? $_GET['search'] : "";
+        $filteredData = array_filter($data, function ($row) use ($searchTerm) {
+        return stripos($row[$_GET['indexSelectOption']], $searchTerm) !== false || stripos($row[$_GET['indexSelectOption']], $searchTerm) !== false;
+    });
+    }
+
+    $cont = 1;
+    foreach ($filteredData as $row){
+
+        echo "<tr class='admin-tr-perfil'>";
+        echo "<td class='perfilDados admin-line$cont admin-contentLine$cont'>{$row[0]}</td>";
+        echo "<td class='perfilDados admin-line$cont admin-contentLine$cont'>{$row[1]}</td>";
+        echo "<td class='perfilDados admin-line$cont admin-contentLine$cont'>{$row[2]}</td>";
+        echo "<td class='perfilDados admin-line$cont admin-contentLine$cont'>{$row[3]}</td>";
+        echo "<td class='perfilDados admin-line$cont admin-contentLine$cont'>{$row[4]}</td>";
+        echo "<td style='display:none' class='perfilDados admin-line$cont admin-instituicao admin-contentLine$cont'>{$row[5]}</td>";
+        echo "<td style='text-align:center'>
+        <a><img class='admin-contentLine$cont' src='../assets/icons/edit.ico'
+         id='admin-editBtn$cont' alt='Editar' width='20' heigth='20'></a>
+         <a id='admin-delBtn$cont'>
+         <img src='../assets/icons/delete.ico' alt='Deletar' width='20' heigth='20'>
+        </a>
+        </td>";
+        echo "</tr>";
+
+
+        $cont += 1;
+
+    }
+
+}
 
 ?>

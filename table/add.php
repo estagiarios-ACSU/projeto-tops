@@ -37,7 +37,7 @@ if(isset($_POST['natureza'])){
     $db->query($query);
     echo $query;
 }elseif(isset($_POST['usuario'])){
-    $rowData = [$_POST["email"],$_POST["senha"],$_POST["admin"],$_POST["usuario"]];
+    $rowData = [$_POST["email"],$_POST["senha"],$_POST["admin"],$_POST["usuario"],$_POST['funcao']];
 
     $query = "INSERT INTO usuario VALUES(null,";
     foreach($rowData as $key){

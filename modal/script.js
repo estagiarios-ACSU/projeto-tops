@@ -1,5 +1,5 @@
 //Váriaveis referentes ao modal de adicionar
-
+alert(1)
 const saveBtn = document.getElementsByClassName('saveBtn');
 const modal = document.getElementsByClassName('add-modal');
 let column = [['Compromissos','Eixo','Responsável','Observações','Situação'],
@@ -26,7 +26,7 @@ let pathForm = 'nenhum';
 
 
 let selectOption = document.getElementsByClassName('columns-infor-choice');
-const tableReference = ['agenda_territorial','perfil_territorial'];
+const tableReference = ['agenda_territorial','perfil_territorial','usuario'];
 const tablesNames = ['agenda-','perfil-','admin-'];
 
 //Faz com que os dados da tabela sejam atualizados
@@ -187,6 +187,7 @@ for(let g = 0;g < 3;g++){
 }
 
 for(let h = 0;h < 3;h++){
+
   addButton[h].addEventListener('click', () => {
     modal[h].style.display = 'flex';
   });
@@ -245,6 +246,7 @@ for(let h = 0;h < 3;h++){
 
     //Search Input event is here
     searchInput[h].addEventListener('input', () => {
+    
       //Pega qual coluna será a base da pesquisa
       let indexSelectOption = column[h].indexOf(selectOption[h].value);
       const searchTerm = searchInput[h].value;
