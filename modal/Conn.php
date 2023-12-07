@@ -15,7 +15,7 @@ class Conn
         $this->dbname = $dbname;
     }
 
-    public function connectDb($dbname)
+    public function connectDb()
     {
         try{
             $this->connection = new PDO($this->db . ":host=". $this->host . ";port=" . $this->port. ";dbname=". $this->dbname, 
