@@ -285,7 +285,7 @@ if (isset($_SESSION["admin"])){
                             
                         $conn_select = new Conn("projeto_top");
                         $conexao_select = $conn_select->connectDb();
-                        $query_select = "SELECT * from responsavel WHERE top = 1";
+                        $query_select = "SELECT * from responsavel WHERE top = '".$_SESSION["top"]."'";
                         $result_select = $conexao_select->prepare($query_select);
                         $result_select->execute();
 
