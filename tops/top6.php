@@ -346,7 +346,7 @@ if (isset($_SESSION["admin"])){
                                     '<div>' +
                                     '<input type="hidden" name="top" id="top" value="<?php if(isset($_SESSION["top"])){echo $_SESSION["top"];}?>" ></input>' +
                                     '<div class="input-submit">' +
-                                    '<input type="submt" name="SendEdit" id="edit" class="bn632-hover bn18" value="Editar"></input>' +
+                                    '<input type="submit" name="SendEdit" id="edit" class="bn632-hover bn18" value="Editar"></input>' +
                                     '<div>' +
                                     '</form>',
                                     focusConfirm: false,
